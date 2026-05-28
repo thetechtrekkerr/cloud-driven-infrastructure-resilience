@@ -1,0 +1,1289 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth bg-[#090D16] text-gray-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airtel Cloud Resilience Portfolio — Abdus-somad Olanrewaju Gbadamosi</title>
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body class="font-sans antialiased text-gray-200">
+    
+    <!-- Navbar -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent py-4 px-6 md:px-12 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <!-- Minimal Graphic Logo -->
+        <span class="text-xl font-display font-extrabold tracking-wider text-white">
+          ASG<span class="text-[#FF9900]">.</span><span class="text-[#C8102E]">AWS</span>
+        </span>
+      </div>
+      <nav class="hidden md:flex space-x-8 text-sm font-medium tracking-wide">
+        <a href="#hero" class="text-gray-400 hover:text-[#FF9900] transition-colors duration-200">Overview</a>
+        <a href="#problem" class="text-gray-400 hover:text-[#C8102E] transition-colors duration-200">The Problem</a>
+        <a href="#solution" class="text-gray-400 hover:text-[#FF9900] transition-colors duration-200">The Solution</a>
+        <a href="#how-it-works" class="text-gray-400 hover:text-white transition-colors duration-200">How It Works</a>
+        <a href="#evidence" class="text-gray-400 hover:text-white transition-colors duration-200">Verified Evidence</a>
+        <a href="#sow" class="text-gray-400 hover:text-white transition-colors duration-200">Statement of Work</a>
+        <a href="#about" class="text-gray-400 hover:text-[#FF9900] transition-colors duration-200">About Me</a>
+      </nav>
+      <!-- Mobile Menu Button Indicator (decorative/scroll reminder) -->
+      <div class="md:hidden">
+        <span class="text-xs bg-[#1F293D] border border-white/10 text-gray-400 px-3 py-1 rounded-full font-mono">
+          AWS Resiliency Hub
+        </span>
+      </div>
+    </header>
+
+    <!-- Page Container -->
+    <main>
+      
+      <!-- 1. HERO SECTION -->
+      <section id="hero" class="relative min-h-screen flex flex-col justify-between items-center py-20 px-4 md:px-8 overflow-hidden z-10">
+        <!-- Pulsing Background Glow Canvas -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+          <div class="absolute top-[40%] left-[35%] hero-glow-1 w-[400px] md:w-[600px] h-[400px] md:h-[600px] rounded-full opacity-20"></div>
+          <div class="absolute top-[45%] left-[55%] hero-glow-2 w-[400px] md:w-[600px] h-[400px] md:h-[600px] rounded-full opacity-25"></div>
+          <!-- Fine grid network background accent -->
+          <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+        </div>
+
+        <div></div> <!-- Spacing spacer for centering -->
+
+        <!-- Hero Primary Content -->
+        <div class="max-w-5xl mx-auto text-center z-10 my-auto">
+          <div class="inline-flex items-center space-x-2 bg-[#1A2433] border border-[#FF9900]/30 px-4 py-1.5 rounded-full mb-8 hover:border-[#C8102E]/40 transition-all duration-300">
+            <span class="w-2 h-2 rounded-full bg-[#FF9900] animate-pulse"></span>
+            <span class="text-xs font-mono tracking-widest text-[#FF9900] uppercase">AWS Student Builder Group Bootcamp 2026</span>
+          </div>
+
+          <h1 class="text-4xl md:text-6xl font-display font-extrabold tracking-tight text-white mb-6 leading-tight max-w-4xl mx-auto">
+            Cloud-Driven Infrastructure Resilience <br class="hidden md:inline" />
+            and Security for <span class="text-[#C8102E]">Airtel Nigeria</span>
+          </h1>
+
+          <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed font-sans">
+            Detecting telecom infrastructure faults automatically within seconds using cellular-connected IoT sensors, cloud monitoring, and instant serverless alert orchestration.
+          </p>
+
+          <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-16">
+            <a id="cta-button" href="#solution" class="px-8 py-4 rounded-xl bg-[#FF9900] hover:bg-[#ffaa22] text-navy font-bold text-sm tracking-wide uppercase transition-all duration-300 shadow-lg shadow-[#FF9900]/10 hover:shadow-[#FF9900]/25 transform hover:-translate-y-0.5">
+              See the architecture
+            </a>
+            <a href="#problem" class="px-8 py-4 rounded-xl bg-[#1A2433] hover:bg-[#253247] border border-white/10 text-white font-semibold text-sm tracking-wide transition-all duration-300 hover:border-white/20">
+              Read the Problem
+            </a>
+          </div>
+
+          <!-- Animated Stat Counters -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto pt-8 border-t border-white/5 bg-[#141C2A]/40 backdrop-blur-md p-8 rounded-2xl border border-white/5">
+            <div id="stat-card-cuts" class="text-center">
+              <div class="text-3xl md:text-5xl font-display font-extrabold text-white mb-2">
+                <span id="counter-cuts" class="text-transparent bg-clip-text bg-gradient-to-r from-white to-[#C8102E]">0</span>
+              </div>
+              <p class="text-xs uppercase tracking-wider font-mono text-gray-400">Daily Fiber Breaks</p>
+            </div>
+            <div id="stat-card-outages" class="text-center">
+              <div class="text-3xl md:text-5xl font-display font-extrabold text-white mb-2">
+                <span id="counter-outages" class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-200">0</span>
+              </div>
+              <p class="text-xs uppercase tracking-wider font-mono text-gray-400">Q1 2026 Outages</p>
+            </div>
+            <div id="stat-card-services" class="text-center">
+              <div class="text-3xl md:text-5xl font-display font-extrabold text-white mb-2">
+                <span id="counter-services" class="text-transparent bg-clip-text bg-gradient-to-r from-white to-[#FF9900]">0</span>
+              </div>
+              <p class="text-xs uppercase tracking-wider font-mono text-gray-400">AWS Services Deployed</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Student & Fellowship Badge Footer -->
+        <div class="w-full text-center z-10 pt-12">
+          <p class="text-xs md:text-sm text-gray-400 font-mono tracking-wide">
+            Investigator: <span class="text-white hover:text-[#FF9900] transition-colors font-semibold">Abdus-somad Olanrewaju Gbadamosi</span>
+          </p>
+          <p class="text-[11px] md:text-xs text-gray-500 font-mono tracking-widest uppercase mt-1">
+            First-Year Computer Engineering, Unilorin • Airtel Africa Foundation Tech Fellow
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. THE PROBLEM SECTION -->
+      <section id="problem" class="reveal-on-scroll py-24 px-6 md:px-12 bg-[#0C1220] border-t border-white/5 relative">
+        <div class="max-w-6xl mx-auto">
+          <!-- Small Label -->
+          <div class="inline-flex items-center space-x-2 bg-[#C8102E]/20 border border-[#C8102E]/40 px-3 py-1 rounded-full mb-4">
+            <span class="text-xs font-mono font-bold tracking-widest text-[#C8102E] uppercase">The Infrastructure Crisis</span>
+          </div>
+
+          <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-6">
+            The Telecom Vandalism & Outage Reality
+          </h2>
+          <p class="text-lg text-gray-400 max-w-3xl mb-12">
+            Nigerian telecommunications infrastructures operate in incredibly hostile physical environments. Fiber network degradation and power outages cost hundreds of millions annually while degrading subscriber trust.
+          </p>
+
+          <!-- Grand High-Impact Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <!-- Card 1 -->
+            <div class="bg-[#151E2E] border border-white/5 hover:border-[#C8102E]/50 rounded-2xl p-8 transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-black/30">
+              <div class="text-red-500 text-3xl mb-4 font-mono font-semibold">43 <span class="text-xs">Breaks/Day</span></div>
+              <h3 class="text-lg font-display font-bold text-white mb-2">Network Fiber Cuts</h3>
+              <p class="text-sm text-gray-400 leading-relaxed">
+                Airtel Nigeria encounters an average of 43 fiber cable cuts every single day due to road construction, negligence, and deliberate sabotage.
+              </p>
+              <div class="mt-6 pt-4 border-t border-white/5 flex justify-between items-center text-xs font-mono text-gray-500">
+                <span>BusinessDay NG</span>
+                <span>April 2025</span>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-[#151E2E] border border-white/5 hover:border-[#C8102E]/50 rounded-2xl p-8 transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-black/30">
+              <div class="text-red-500 text-3xl mb-4 font-mono font-semibold">N2.3B <span class="text-xs">Losses</span></div>
+              <h3 class="text-lg font-display font-bold text-white mb-2">Equipment Vandalism</h3>
+              <p class="text-sm text-gray-400 leading-relaxed">
+                Over N2.3 billion in high-capacity diesel generators, batteries, and safety equipment was stolen from Nigeria's remote network nodes in 2025.
+              </p>
+              <div class="mt-6 pt-4 border-t border-white/5 flex justify-between items-center text-xs font-mono text-gray-500">
+                <span>Blueprint Newspapers</span>
+                <span>May 2026</span>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-[#151E2E] border border-white/5 hover:border-[#C8102E]/50 rounded-2xl p-8 transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-black/30">
+              <div class="text-red-500 text-3xl mb-4 font-mono font-semibold">577 <span class="text-xs">Outages</span></div>
+              <h3 class="text-lg font-display font-bold text-white mb-2">Rolling Outages</h3>
+              <p class="text-sm text-gray-400 leading-relaxed">
+                Nigerian telecommunication streams collapsed 577 times across operators in Q1 2026 alone, paralyzing local business services and civic operations.
+              </p>
+              <div class="mt-6 pt-4 border-t border-white/5 flex justify-between items-center text-xs font-mono text-gray-500">
+                <span>Blueprint Newspapers</span>
+                <span>May 2026</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Highlight Paragraph Detailing the Detection Gap -->
+          <div class="bg-gradient-to-r from-[#1E121E] to-[#151E2E] border border-[#C8102E]/20 rounded-2xl p-8 relative overflow-hidden">
+            <!-- Accent stripe -->
+            <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#C8102E]"></div>
+            <div class="flex items-start space-x-4 pl-4">
+              <div class="text-2xl text-[#C8102E]">⚠️</div>
+              <div>
+                <h4 class="text-lg font-display font-semibold text-white mb-2">The Critical Vulnerability: The "Detection Gap"</h4>
+                <p class="text-gray-300 leading-relaxed font-sans md:text-base text-sm">
+                  The primary roadblock is not physical vandalism itself, but the <span class="text-[#C8102E] font-semibold">reactive detection gap</span>. Today, Airtel Nigeria only catches fiber cuts or generator shutdowns when subscribers start experiencing dead zones and flooding the network with complaints. By then, critical downtime has compounded. Our platform targets these vital hours of delay, automating the jump from immediate mechanical failure to technician cell dispatch down to <span class="text-white font-semibold underline decoration-[#C8102E]">seconds</span>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. THE SOLUTION SECTION (ARCHITECTURE DIAGRAM) -->
+      <section id="solution" class="reveal-on-scroll py-24 px-6 md:px-12 bg-[#090D16]">
+        <div class="max-w-6xl mx-auto">
+          <!-- Small Label -->
+          <div class="inline-flex items-center space-x-2 bg-[#FF9900]/10 border border-[#FF9900]/30 px-3 py-1 rounded-full mb-4">
+            <span class="text-xs font-mono font-bold tracking-widest text-[#FF9900] uppercase">Resiliency Framework</span>
+          </div>
+
+          <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-6">
+            The Serverless Resiliency Architecture
+          </h2>
+          <p class="text-lg text-gray-400 max-w-3xl mb-12">
+            A resilient solution utilizing six tightly integrated AWS services. Grounded on an out-of-band cellular link that bypasses severed physical fiber assets to ensure telemetry transmission under all cut events.
+          </p>
+
+          <!-- Core Flow Graphic Container -->
+          <div class="relative bg-[#111823]/60 border border-white/5 rounded-3xl p-8 md:p-12 mb-16 overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#FF9900]/30 to-transparent"></div>
+            
+            <p class="text-center text-xs font-mono text-gray-500 uppercase tracking-widest mb-10">Data Pipeline Flow & Service Connectors</p>
+
+            <!-- Custom CSS & SVG Flow Diagram Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-x-8 md:gap-y-16 relative">
+              
+              <!-- Service Card 1 -->
+              <div class="service-node relative p-6 bg-[#162030] border border-white/5 hover:border-[#FF9900]/40 rounded-2xl transition-all duration-300 shadow-xl group">
+                <!-- Highlight Number Badge -->
+                <span class="absolute top-4 right-4 text-xs font-mono font-bold bg-[#FF9900]/20 text-[#FF9900] px-2 py-0.5 rounded">01</span>
+                <!-- Unified AWS Indicator Icon (SVG element) -->
+                <div class="w-10 h-10 rounded-xl bg-[#FF9900]/10 border border-[#FF9900]/20 flex items-center justify-center mb-4 transition-colors duration-300 group-hover:bg-[#FF9900]/20">
+                  <span class="text-lg text-[#FF9900]">📡</span>
+                </div>
+                <h4 class="text-base font-display font-bold text-white mb-1">AWS IoT Core</h4>
+                <p class="text-xs uppercase tracking-wider font-mono text-gray-400 mb-2">Telemetry Ingestion</p>
+                <p class="text-xs text-gray-400 leading-relaxed">
+                  Receives live sensor streams from telecom sites via cellular backhauls, completely bypassing the damaged physical fiber lines.
+                </p>
+              </div>
+
+              <!-- Connector Line Desktop (1 to 2) -->
+              <div class="hidden md:flex absolute top-[60px] left-[30%] w-[10%] items-center justify-center text-gray-600">
+                <svg class="w-full h-4" fill="none" viewBox="0 0 100 16">
+                  <path d="M0 8 h90" stroke="#FF9900" stroke-width="2" stroke-dasharray="4 4" class="animate-[dash_2s_linear_infinite]" />
+                  <polygon points="90,4 98,8 90,12" fill="#FF9900" />
+                </svg>
+              </div>
+              <!-- Connector Line Mobile -->
+              <div class="md:hidden flex justify-center text-[#FF9900] my-[-16px]">
+                <span class="text-2xl animate-bounce">↓</span>
+              </div>
+
+              <!-- Service Card 2 -->
+              <div class="service-node relative p-6 bg-[#162030] border border-white/5 hover:border-[#FF9900]/40 rounded-2xl transition-all duration-300 shadow-xl group">
+                <span class="absolute top-4 right-4 text-xs font-mono font-bold bg-[#FF9900]/20 text-[#FF9900] px-2 py-0.5 rounded">02</span>
+                <div class="w-10 h-10 rounded-xl bg-[#FF9900]/10 border border-[#FF9900]/20 flex items-center justify-center mb-4 transition-colors duration-300 group-hover:bg-[#FF9900]/20">
+                  <span class="text-lg text-[#FF9900]">📈</span>
+                </div>
+                <h4 class="text-base font-display font-bold text-white mb-1">Amazon CloudWatch</h4>
+                <p class="text-xs uppercase tracking-wider font-mono text-gray-400 mb-2">Intelligent Monitoring</p>
+                <p class="text-xs text-gray-400 leading-relaxed">
+                  Constantly monitors incoming sensor variables and triggers instant serverless alarm pipelines when signals cut or fuel steps drop.
+                </p>
+              </div>
+
+              <!-- Connector Line Desktop (2 to 3) -->
+              <div class="hidden md:flex absolute top-[60px] left-[63%] w-[10%] items-center justify-center text-gray-600">
+                <svg class="w-full h-4" fill="none" viewBox="0 0 100 16">
+                  <path d="M0 8 h90" stroke="#FF9900" stroke-width="2" stroke-dasharray="4 4" />
+                  <polygon points="90,4 98,8 90,12" fill="#FF9900" />
+                </svg>
+              </div>
+              <!-- Connector Line Mobile -->
+              <div class="md:hidden flex justify-center text-[#FF9900] my-[-16px]">
+                <span class="text-2xl animate-bounce">↓</span>
+              </div>
+
+              <!-- Service Card 3 -->
+              <div class="service-node relative p-6 bg-[#162030] border border-white/5 hover:border-[#FF9900]/40 rounded-2xl transition-all duration-300 shadow-xl group">
+                <span class="absolute top-4 right-4 text-xs font-mono font-bold bg-[#FF9900]/20 text-[#FF9900] px-2 py-0.5 rounded">03</span>
+                <div class="w-10 h-10 rounded-xl bg-[#FF9900]/10 border border-[#FF9900]/20 flex items-center justify-center mb-4 transition-colors duration-300 group-hover:bg-[#FF9900]/20">
+                  <span class="text-[#FF9900] font-mono text-base font-bold">λ</span>
+                </div>
+                <h4 class="text-base font-display font-bold text-white mb-1">AWS Lambda</h4>
+                <p class="text-xs uppercase tracking-wider font-mono text-gray-400 mb-2">Automated Response Logic</p>
+                <p class="text-xs text-gray-400 leading-relaxed">
+                  Processes telemetry payloads within milliseconds, classifies fault levels, retrieves base locations from DynamoDB, and engages SNS.
+                </p>
+              </div>
+
+              <!-- Connector Row Divider Desktop -->
+              <div class="hidden md:block col-span-3 h-[1px] bg-white/5 my-2"></div>
+
+              <!-- Service Card 4 -->
+              <div class="service-node relative p-6 bg-[#162030] border border-white/5 hover:border-[#FF9900]/40 rounded-2xl transition-all duration-300 shadow-xl group">
+                <span class="absolute top-4 right-4 text-xs font-mono font-bold bg-[#FF9900]/20 text-[#FF9900] px-2 py-0.5 rounded">04</span>
+                <div class="w-10 h-10 rounded-xl bg-[#FF9900]/10 border border-[#FF9900]/20 flex items-center justify-center mb-4 transition-colors duration-300 group-hover:bg-[#FF9900]/20">
+                  <span class="text-lg text-[#FF9900]">🗄️</span>
+                </div>
+                <h4 class="text-base font-display font-bold text-white mb-1">Amazon DynamoDB</h4>
+                <p class="text-xs uppercase tracking-wider font-mono text-gray-400 mb-2">Resilient Logs Store</p>
+                <p class="text-xs text-gray-400 leading-relaxed">
+                  Logs structural incident reports instantly with fault category, location, and severity, compiling historical audit datasets over time.
+                </p>
+              </div>
+
+              <!-- Connector Line Desktop (4 to 5) -->
+              <div class="hidden md:flex absolute bottom-[110px] left-[30%] w-[10%] items-center justify-center text-gray-600">
+                <svg class="w-full h-4" fill="none" viewBox="0 0 100 16">
+                  <path d="M0 8 h90" stroke="#FF9900" stroke-width="2" stroke-dasharray="4 4" />
+                  <polygon points="90,4 98,8 90,12" fill="#FF9900" />
+                </svg>
+              </div>
+              <!-- Connector Line Mobile -->
+              <div class="md:hidden flex justify-center text-[#FF9900] my-[-16px]">
+                <span class="text-2xl animate-bounce">↓</span>
+              </div>
+
+              <!-- Service Card 5 -->
+              <div class="service-node relative p-6 bg-[#162030] border border-white/5 hover:border-[#FF9900]/40 rounded-2xl transition-all duration-300 shadow-xl group">
+                <span class="absolute top-4 right-4 text-xs font-mono font-bold bg-[#FF9900]/20 text-[#FF9900] px-2 py-0.5 rounded">05</span>
+                <div class="w-10 h-10 rounded-xl bg-[#FF9900]/10 border border-[#FF9900]/20 flex items-center justify-center mb-4 transition-colors duration-300 group-hover:bg-[#FF9900]/20">
+                  <span class="text-lg text-[#FF9900]">🔔</span>
+                </div>
+                <h4 class="text-base font-display font-bold text-white mb-1">Amazon SNS</h4>
+                <p class="text-xs uppercase tracking-wider font-mono text-gray-400 mb-2">Automated Alerting</p>
+                <p class="text-xs text-gray-400 leading-relaxed">
+                  Delivers direct multi-channel alert formats: technician SMS, push feeds to security teams, and regional emails based on urgency.
+                </p>
+              </div>
+
+              <!-- Connector Line Desktop (5 to 6) -->
+              <div class="hidden md:flex absolute bottom-[110px] left-[63%] w-[10%] items-center justify-center text-gray-600">
+                <svg class="w-full h-4" fill="none" viewBox="0 0 100 16">
+                  <path d="M0 8 h90" stroke="#FF9900" stroke-width="2" stroke-dasharray="4 4" />
+                  <polygon points="90,4 98,8 90,12" fill="#FF9900" />
+                </svg>
+              </div>
+              <!-- Connector Line Mobile -->
+              <div class="md:hidden flex justify-center text-[#FF9900] my-[-16px]">
+                <span class="text-2xl animate-bounce">↓</span>
+              </div>
+
+              <!-- Service Card 6 -->
+              <div class="service-node relative p-6 bg-[#162030] border border-white/5 hover:border-[#FF9900]/40 rounded-2xl transition-all duration-300 shadow-xl group">
+                <span class="absolute top-4 right-4 text-xs font-mono font-bold bg-[#FF9900]/20 text-[#FF9900] px-2 py-0.5 rounded">06</span>
+                <div class="w-10 h-10 rounded-xl bg-[#FF9900]/10 border border-[#FF9900]/20 flex items-center justify-center mb-4 transition-colors duration-300 group-hover:bg-[#FF9900]/20">
+                  <span class="text-lg text-[#FF9900]">🛡️</span>
+                </div>
+                <h4 class="text-base font-display font-bold text-white mb-1">Cognito & IAM</h4>
+                <p class="text-xs uppercase tracking-wider font-mono text-gray-400 mb-2">Least-Privilege Security</p>
+                <p class="text-xs text-gray-400 leading-relaxed">
+                  Secures identity credentials, manages RBAC policies for regional engineers, and enforces zero-trust authentication on all API routes.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- INTERACTIVE THREAT SIMULATOR WIDGET (RECRUITER DELIGHT) -->
+          <div class="mt-12 bg-[#111823]/60 border border-white/5 rounded-3xl p-8 relative overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#C8102E]/30 to-transparent"></div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+              <!-- Left side: Scenario Choice & Action Button -->
+              <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+                <div>
+                  <span class="text-[10px] font-mono text-[#FF9900] uppercase font-bold tracking-widest bg-[#FF9900]/10 border border-[#FF9900]/30 px-2.5 py-1 rounded">Interactive Lab</span>
+                  <h3 class="text-xl md:text-2xl font-display font-bold text-white mt-3">Live AWS Incident Response Simulator</h3>
+                  <p class="text-xs text-gray-400 mt-2 leading-relaxed font-sans">
+                    Recruiters & Engineers: select one of Airtel's primary physical threat vectors below and trigger a simulated outage. Track the instant, serverless AWS event pipeline routing telemetry and alerting on-call technicians under 2 seconds!
+                  </p>
+                </div>
+
+                <!-- Scenario Choices -->
+                <div class="space-y-3">
+                  <label class="block text-[10px] font-mono text-gray-400 uppercase tracking-widest">Select Incident Scenario</label>
+                  
+                  <button id="scenario-btn-fiber" onclick="selectScenario('fiber')" class="w-full text-left p-4 rounded-xl border border-[#C8102E]/30 bg-[#C8102E]/5 hover:bg-[#C8102E]/10 transition-all duration-200 flex items-start space-x-3 group active-scenario">
+                    <span class="text-xl">🪓</span>
+                    <div>
+                      <h4 class="text-xs font-mono font-bold text-white">Scenario A: Fiber Line Sabotage</h4>
+                      <p class="text-[11px] text-gray-400 mt-1 font-sans">Simulates severe physical damage on primary backhaul trunk paths in Lagos Hub.</p>
+                    </div>
+                  </button>
+
+                  <button id="scenario-btn-fuel" onclick="selectScenario('fuel')" class="w-full text-left p-4 rounded-xl border border-white/5 bg-[#141C2A]/40 hover:bg-white/[0.02] transition-all duration-200 flex items-start space-x-3 group">
+                    <span class="text-xl">⛽</span>
+                    <div>
+                      <h4 class="text-xs font-mono font-bold text-white">Scenario B: Generator Fuel Theft</h4>
+                      <p class="text-[11px] text-gray-400 mt-1 font-sans">Simulates sudden diesel volume drain and battery enclosure intrusion at remote tower.</p>
+                    </div>
+                  </button>
+                </div>
+
+                <!-- Run Simulation Button -->
+                <button id="trigger-sim-btn" onclick="runIncidentSimulation()" class="w-full py-4 rounded-xl bg-[#C8102E] hover:bg-rose-700 text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 shadow-md shadow-[#C8102E]/10 flex items-center justify-center space-x-2">
+                  <span>⚡</span>
+                  <span>Trigger Incident Fault</span>
+                </button>
+              </div>
+
+              <!-- Right side: Realistic Console Monitor displaying payloads -->
+              <div class="lg:col-span-7 bg-[#090D16] border border-white/5 rounded-2xl p-6 flex flex-col justify-between font-mono text-[11px] min-h-[360px] relative overflow-hidden">
+                <div class="flex justify-between items-center pb-3 border-b border-white/5 text-gray-500 text-[10px]">
+                  <div class="flex items-center space-x-2 font-mono">
+                    <span class="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></span>
+                    <span>NOC SYSTEM HUB ACTIVATED</span>
+                  </div>
+                  <div class="font-mono">DEVICE_ID: NGA-BTS-LXS-404</div>
+                </div>
+
+                <!-- Logs screen container -->
+                <div id="sim-console" class="flex-grow my-4 space-y-3 max-h-[260px] overflow-y-auto custom-scrollbar text-gray-400 pr-2">
+                  <div class="text-gray-500 font-mono">&gt; Waiting for incident triggers... Select a scenario on the left and click "Trigger Incident Fault".</div>
+                </div>
+
+                <div class="pt-3 border-t border-white/5 flex justify-between items-center text-gray-500 text-[10px] font-mono">
+                  <span>REACTION LATENCY: <span id="sim-latency" class="text-white">--</span></span>
+                  <span>AWS REGION: eu-west-1</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 4. HOW IT WORKS SECTION -->
+      <section id="how-it-works" class="reveal-on-scroll py-24 px-6 md:px-12 bg-[#0C1220] border-t border-white/5 relative">
+        <div class="max-w-5xl mx-auto">
+          <!-- Small Label -->
+          <div class="inline-flex items-center space-x-2 bg-gray-800 border border-gray-700 px-3 py-1 rounded-full mb-4">
+            <span class="text-xs font-mono font-bold tracking-widest text-gray-300 uppercase">Operational Pipeline</span>
+          </div>
+
+          <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-6">
+            The 7-Step Resiliency Pipeline
+          </h2>
+          <p class="text-lg text-gray-400 max-w-3xl mb-16">
+            How data and response orchestrations transition across physical base stations and AWS servers in an event-driven loop.
+          </p>
+
+          <!-- Timeline Container -->
+          <div class="relative">
+            <!-- Central Timeline Line for Desktop -->
+            <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#C8102E] via-gray-600 to-[#FF9900]"></div>
+            <!-- Mobile Timeline Line -->
+            <div class="md:hidden absolute left-4 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#C8102E] via-gray-600 to-[#FF9900]"></div>
+
+            <div class="space-y-12">
+              
+              <!-- Step 1 -->
+              <div class="relative flex flex-col md:flex-row md:justify-between items-stretch">
+                <!-- Timeline Dot -->
+                <div class="absolute left-[3px] md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 rounded-full bg-[#C8102E] border-4 border-[#0C1220] z-20 flex items-center justify-center text-[10px] text-white font-mono font-bold">1</div>
+                <!-- Card Container -->
+                <div class="w-full md:w-[45%] pl-10 md:pl-0 md:text-right">
+                  <div class="bg-[#151E2E] p-6 rounded-2xl border border-white/5 shadow-md hover:border-white/10 transition-colors duration-300">
+                    <span class="text-xs font-mono text-[#C8102E] font-bold block mb-1">STEP 01 — RECIPIENT FAILURE</span>
+                    <h4 class="text-lg font-display font-bold text-white mb-2">Physical Event Occurs</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed font-sans">
+                      A physical event occurs at an Airtel base station: fiber cable cut, fuel or generator theft, battery drain, or solar equipment tampering.
+                    </p>
+                  </div>
+                </div>
+                <div class="hidden md:block w-[45%]"></div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="relative flex flex-col md:flex-row md:justify-between items-stretch">
+                <!-- Timeline Dot -->
+                <div class="absolute left-[3px] md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 rounded-full bg-gray-500 border-4 border-[#0C1220] z-20 flex items-center justify-center text-[10px] text-white font-mono font-bold">2</div>
+                <div class="hidden md:block w-[45%]"></div>
+                <!-- Card Container -->
+                <div class="w-full md:w-[45%] pl-10">
+                  <div class="bg-[#151E2E] p-6 rounded-2xl border border-white/5 shadow-md hover:border-white/10 transition-colors duration-300">
+                    <span class="text-xs font-mono text-gray-400 font-bold block mb-1">STEP 02 — SENSOR TRANSMISSION</span>
+                    <h4 class="text-lg font-display font-bold text-white mb-2">Out-of-Band Upstream</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed font-sans">
+                      Site sensors capture voltage changes or cut points instantly. The hardware IoT gateway routes this payload to AWS IoT Core over an independent cellular uplink, bypassing the cut line.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="relative flex flex-col md:flex-row md:justify-between items-stretch">
+                <!-- Timeline Dot -->
+                <div class="absolute left-[3px] md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 rounded-full bg-gray-500 border-4 border-[#0C1220] z-20 flex items-center justify-center text-[10px] text-white font-mono font-bold">3</div>
+                <!-- Card Container -->
+                <div class="w-full md:w-[45%] pl-10 md:pl-0 md:text-right">
+                  <div class="bg-[#151E2E] p-6 rounded-2xl border border-white/5 shadow-md hover:border-white/10 transition-colors duration-300">
+                    <span class="text-xs font-mono text-gray-400 font-bold block mb-1">STEP 03 — THRESHOLD SCAN</span>
+                    <h4 class="text-lg font-display font-bold text-white mb-2">CloudWatch Raising Alarm</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed font-sans">
+                      Amazon CloudWatch receives sensor reports. Upon processing static metric interruptions or anomalous fuel rate drops, it raises an instant alert flag.
+                    </p>
+                  </div>
+                </div>
+                <div class="hidden md:block w-[45%]"></div>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="relative flex flex-col md:flex-row md:justify-between items-stretch">
+                <!-- Timeline Dot -->
+                <div class="absolute left-[3px] md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 rounded-full bg-[#FF9900] border-4 border-[#0C1220] z-20 flex items-center justify-center text-[10px] text-white font-mono font-bold">4</div>
+                <div class="hidden md:block w-[45%]"></div>
+                <!-- Card Container -->
+                <div class="w-full md:w-[45%] pl-10">
+                  <div class="bg-[#151E2E] p-6 rounded-2xl border border-white/5 shadow-md hover:border-white/10 transition-colors duration-300">
+                    <span class="text-xs font-mono text-[#FF9900] font-bold block mb-1">STEP 04 — SERVERLESS COMPUTING</span>
+                    <h4 class="text-lg font-display font-bold text-white mb-2">AWS Lambda Is Triggered</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed font-sans">
+                      CloudWatch alarms trigger AWS Lambda. Our handler parses telemetry packets, classifies fault categories, and Queries DynamoDB to locate key technical inventory on the site.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 5 -->
+              <div class="relative flex flex-col md:flex-row md:justify-between items-stretch">
+                <!-- Timeline Dot -->
+                <div class="absolute left-[3px] md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 rounded-full bg-[#FF9900] border-4 border-[#0C1220] z-20 flex items-center justify-center text-[10px] text-navy font-mono font-bold">5</div>
+                <!-- Card Container -->
+                <div class="w-full md:w-[45%] pl-10 md:pl-0 md:text-right">
+                  <div class="bg-[#151E2E] p-6 rounded-2xl border border-white/5 shadow-md hover:border-white/10 transition-colors duration-300">
+                    <span class="text-xs font-mono text-[#FF9900] font-bold block mb-1">STEP 05 — DATABASE RECORD</span>
+                    <h4 class="text-lg font-display font-bold text-white mb-2">DynamoDB Audit Ledger</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed font-sans">
+                      DynamoDB logs a permanent, timestamped network incident ledger, documenting exact fault classification, estimated station location, and the assigned repair unit.
+                    </p>
+                  </div>
+                </div>
+                <div class="hidden md:block w-[45%]"></div>
+              </div>
+
+              <!-- Step 6 -->
+              <div class="relative flex flex-col md:flex-row md:justify-between items-stretch">
+                <!-- Timeline Dot -->
+                <div class="absolute left-[3px] md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 rounded-full bg-gray-500 border-4 border-[#0C1220] z-20 flex items-center justify-center text-[10px] text-white font-mono font-bold">6</div>
+                <div class="hidden md:block w-[45%]"></div>
+                <!-- Card Container -->
+                <div class="w-full md:w-[45%] pl-10">
+                  <div class="bg-[#151E2E] p-6 rounded-2xl border border-white/5 shadow-md hover:border-white/10 transition-colors duration-300">
+                    <span class="text-xs font-mono text-gray-400 font-bold block mb-1">STEP 06 — NOTIFICATION FEED</span>
+                    <h4 class="text-lg font-display font-bold text-white mb-2">SNS Alert Dispatch</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed font-sans">
+                      Amazon SNS fires target notifications: SMS to regional field response crews, push alerts to security panels in the NOC center, and email updates to command leads.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 7 -->
+              <div class="relative flex flex-col md:flex-row md:justify-between items-stretch">
+                <!-- Timeline Dot -->
+                <div class="absolute left-[3px] md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 rounded-full bg-[#FF9900] border-4 border-[#0C1220] z-20 flex items-center justify-center text-[10px] text-navy font-mono font-bold">7</div>
+                <!-- Card Container -->
+                <div class="w-full md:w-[45%] pl-10 md:pl-0 md:text-right">
+                  <div class="bg-[#151E2E] p-6 rounded-2xl border border-white/5 shadow-md hover:border-white/10 transition-colors duration-300">
+                    <span class="text-xs font-mono text-[#FF9900] font-bold block mb-1">STEP 07 — SECURITY & LOGGING</span>
+                    <h4 class="text-lg font-display font-bold text-white mb-2">IAM & Cognito Isolation</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed font-sans">
+                      AWS IAM enforces strict permissions across microservices, Cognito handles engineer access control, and AWS CloudTrail tracks activity registries for NCC audit reports.
+                    </p>
+                  </div>
+                </div>
+                <div class="hidden md:block w-[45%]"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. THE EVIDENCE SECTION -->
+      <section id="evidence" class="reveal-on-scroll py-24 px-6 md:px-12 bg-[#090D16]">
+        <div class="max-w-6xl mx-auto">
+          <!-- Small Label -->
+          <div class="inline-flex items-center space-x-2 bg-[#FF9900]/10 border border-[#FF9900]/30 px-3 py-1 rounded-full mb-4">
+            <span class="text-xs font-mono font-bold tracking-widest text-[#FF9900] uppercase">Empirical Grounding</span>
+          </div>
+
+          <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-6">
+            Built on Verified Evidence, Not Assumptions
+          </h2>
+          <p class="text-lg text-gray-400 max-w-3xl mb-12">
+            Every operational metric and threat parameter backing this serverless design is pulled directly from verified industry documentation, Nigerian Communications Commission reports, and premium economic papers.
+          </p>
+
+          <!-- Table/Card Grid Layout -->
+          <div class="overflow-hidden border border-white/5 bg-[#111823] rounded-3xl shadow-xl">
+            <div class="overflow-x-auto">
+              <table class="w-full text-left border-collapse">
+                <thead>
+                  <tr class="border-b border-white/5 bg-[#162030]/80 text-xs font-mono text-gray-400 uppercase tracking-widest">
+                    <th class="p-6">Metric/Threat Parameter</th>
+                    <th class="p-6">Documented Source</th>
+                    <th class="p-6 text-right">Publication Date</th>
+                  </tr>
+                </thead>
+                <tbody class="text-sm divide-y divide-white/5 font-sans">
+                  
+                  <!-- Stat Row 1 -->
+                  <tr class="hover:bg-white/[0.02] transition-colors duration-200">
+                    <td class="p-6">
+                      <div class="font-bold text-white">43 Fiber Cuts per Day</div>
+                      <div class="text-xs text-gray-400 mt-1 max-w-sm">Average daily physical link disruptions across Airtel Nigeria's infrastructure, verified by representatives.</div>
+                    </td>
+                    <td class="p-6 font-mono text-xs text-gray-300">BusinessDay NG</td>
+                    <td class="p-6 font-mono text-xs text-right text-gray-400">April 2025</td>
+                  </tr>
+
+                  <!-- Stat Row 2 -->
+                  <tr class="hover:bg-white/[0.02] transition-colors duration-200">
+                    <td class="p-6">
+                      <div class="font-bold text-white">$23 Million Repair Overhead</div>
+                      <div class="text-xs text-gray-400 mt-1 max-w-sm">Aggregated yearly overhead to repair broken, cut, or damaged physical ground lines across Africa's corridors.</div>
+                    </td>
+                    <td class="p-6 font-mono text-xs text-gray-300">France24 / AFP</td>
+                    <td class="p-6 font-mono text-xs text-right text-gray-400">August 2025</td>
+                  </tr>
+
+                  <!-- Stat Row 3 -->
+                  <tr class="hover:bg-white/[0.02] transition-colors duration-200">
+                    <td class="p-6">
+                      <div class="font-bold text-white">577 Nationwide Outages</div>
+                      <div class="text-xs text-gray-400 mt-1 max-w-sm font-sans">Documented absolute service cuts occurring across active telecommunication networks in Nigeria in just one quarter.</div>
+                    </td>
+                    <td class="p-6 font-mono text-xs text-gray-300">Blueprint Newspapers</td>
+                    <td class="p-6 font-mono text-xs text-right text-gray-400">May 2026</td>
+                  </tr>
+
+                  <!-- Stat Row 4 -->
+                  <tr class="hover:bg-white/[0.02] transition-colors duration-200">
+                    <td class="p-6">
+                      <div class="font-bold text-white">N2.3 Billion generator site losses</div>
+                      <div class="text-xs text-gray-400 mt-1 max-w-sm">Valuable auxiliary equipment (batteries, copper, diesel generators) stolen from isolated operator nodes.</div>
+                    </td>
+                    <td class="p-6 font-mono text-xs text-gray-300">Blueprint Newspapers</td>
+                    <td class="p-6 font-mono text-xs text-right text-gray-400">May 2026</td>
+                  </tr>
+
+                  <!-- Stat Row 5 -->
+                  <tr class="hover:bg-white/[0.02] transition-colors duration-200">
+                    <td class="p-6">
+                      <div class="font-bold text-white">N45 Million Regulatory Penalties</div>
+                      <div class="text-xs text-gray-400 mt-1 max-w-sm">Heavy operational fines levied on mobile providers (including Airtel) for structural SLA failure.</div>
+                    </td>
+                    <td class="p-6 font-mono text-xs text-gray-300">Nigerian Communications Commission</td>
+                    <td class="p-6 font-mono text-xs text-right text-gray-400">October 2025</td>
+                  </tr>
+
+                  <!-- Stat Row 6 -->
+                  <tr class="hover:bg-white/[0.02] transition-colors duration-200">
+                    <td class="p-6">
+                      <div class="font-bold text-white">18% GDP Digital Contribution</div>
+                      <div class="text-xs text-gray-400 mt-1 max-w-sm font-sans">Nigeria's ICT and telecom streams account for nearly a fifth of national gross production, elevating network uptime to critical status.</div>
+                    </td>
+                    <td class="p-6 font-mono text-xs text-gray-300 font-sans">AFP Research</td>
+                    <td class="p-6 font-mono text-xs text-right text-gray-400">August 2025</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5.5 STATEMENT OF WORK (SOW) & ARCHITECTURAL SPECS SECTION -->
+      <section id="sow" class="reveal-on-scroll py-24 px-6 md:px-12 bg-[#0C1220] border-t border-white/5 relative">
+        <div class="max-w-6xl mx-auto">
+          <!-- Small Label -->
+          <div class="inline-flex items-center space-x-2 bg-[#C8102E]/10 border border-[#C8102E]/40 px-3 py-1 rounded-full mb-4">
+            <span class="text-xs font-mono font-bold tracking-widest text-[#C8102E] uppercase">Formal Documentation</span>
+          </div>
+
+          <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-6">
+            Statement of Work & Project Specifications
+          </h2>
+          <p class="text-lg text-gray-400 max-w-3xl mb-12">
+            The formal architectural contract and engineering criteria drafted under standard enterprise frameworks to map out deliverables, scope boundaries, and execution models.
+          </p>
+
+          <!-- Interactive SOW Viewer Container -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
+            
+            <!-- Left Panel: 15 Step Tree (Scrollable index list) -->
+            <div class="lg:col-span-4 bg-[#111823] border border-white/5 rounded-2xl p-4 max-h-[580px] overflow-y-auto space-y-1.5 custom-scrollbar">
+              <p class="text-[10px] font-mono text-gray-500 uppercase tracking-widest px-3 pb-3 border-b border-white/5 mb-3">Document Section Tree</p>
+              
+              <button onclick="switchSowSection('sow-exec')" id="btn-sow-exec" class="sow-tab-btn active w-full text-left px-4 py-3 rounded-lg text-xs font-mono flex items-center justify-between transition-all duration-200">
+                <span class="truncate">SOW-01: Executive Summary</span>
+                <span class="text-gray-600">→</span>
+              </button>
+              
+              <button onclick="switchSowSection('sow-background')" id="btn-sow-background" class="sow-tab-btn w-full text-left px-4 py-3 rounded-lg text-xs font-mono flex items-center justify-between transition-all duration-200">
+                <span class="truncate">SOW-02: Company Background</span>
+                <span class="text-gray-600">→</span>
+              </button>
+
+              <button onclick="switchSowSection('sow-research')" id="btn-sow-research" class="sow-tab-btn w-full text-left px-4 py-3 rounded-lg text-xs font-mono flex items-center justify-between transition-all duration-200">
+                <span class="truncate">SOW-03: Research Findings</span>
+                <span class="text-gray-600">→</span>
+              </button>
+
+              <button onclick="switchSowSection('sow-problem')" id="btn-sow-problem" class="sow-tab-btn w-full text-left px-4 py-3 rounded-lg text-xs font-mono flex items-center justify-between transition-all duration-200">
+                <span class="truncate">SOW-04: Problem Statement</span>
+                <span class="text-gray-600">→</span>
+              </button>
+
+              <button onclick="switchSowSection('sow-impact')" id="btn-sow-impact" class="sow-tab-btn w-full text-left px-4 py-3 rounded-lg text-xs font-mono flex items-center justify-between transition-all duration-200">
+                <span class="truncate">SOW-05: Business Impact</span>
+                <span class="text-gray-600">→</span>
+              </button>
+
+              <button onclick="switchSowSection('sow-solution')" id="btn-sow-solution" class="sow-tab-btn w-full text-left px-4 py-3 rounded-lg text-xs font-mono flex items-center justify-between transition-all duration-200">
+                <span class="truncate">SOW-06: Proposed AWS Solution</span>
+                <span class="text-gray-600">→</span>
+              </button>
+
+              <button onclick="switchSowSection('sow-architecture')" id="btn-sow-architecture" class="sow-tab-btn w-full text-left px-4 py-3 rounded-lg text-xs font-mono flex items-center justify-between transition-all duration-200">
+                <span class="truncate">SOW-07: Architecture Overview</span>
+                <span class="text-gray-600">→</span>
+              </button>
+
+              <button onclick="switchSowSection('sow-implementation')" id="btn-sow-implementation" class="sow-tab-btn w-full text-left px-4 py-3 rounded-lg text-xs font-mono flex items-center justify-between transition-all duration-200">
+                <span class="truncate">SOW-08: Implementation Approach</span>
+                <span class="text-gray-600">→</span>
+              </button>
+
+              <button onclick="switchSowSection('sow-security')" id="btn-sow-security" class="sow-tab-btn w-full text-left px-4 py-3 rounded-lg text-xs font-mono flex items-center justify-between transition-all duration-200">
+                <span class="truncate">SOW-09: Security Considerations</span>
+                <span class="text-gray-600">→</span>
+              </button>
+
+              <button onclick="switchSowSection('sow-reliability')" id="btn-sow-reliability" class="sow-tab-btn w-full text-left px-4 py-3 rounded-lg text-xs font-mono flex items-center justify-between transition-all duration-200">
+                <span class="truncate">SOW-10: Reliability Criteria</span>
+                <span class="text-gray-600">→</span>
+              </button>
+
+              <button onclick="switchSowSection('sow-cost')" id="btn-sow-cost" class="sow-tab-btn w-full text-left px-4 py-3 rounded-lg text-xs font-mono flex items-center justify-between transition-all duration-200">
+                <span class="truncate">SOW-11: Cost Projections</span>
+                <span class="text-gray-600">→</span>
+              </button>
+
+              <button onclick="switchSowSection('sow-benefits')" id="btn-sow-benefits" class="sow-tab-btn w-full text-left px-4 py-3 rounded-lg text-xs font-mono flex items-center justify-between transition-all duration-200">
+                <span class="truncate">SOW-12: Expected Benefits</span>
+                <span class="text-gray-600">→</span>
+              </button>
+
+              <button onclick="switchSowSection('sow-limitations')" id="btn-sow-limitations" class="sow-tab-btn w-full text-left px-4 py-3 rounded-lg text-xs font-mono flex items-center justify-between transition-all duration-200">
+                <span class="truncate">SOW-13: Limitations & Assumptions</span>
+                <span class="text-gray-600">→</span>
+              </button>
+
+              <button onclick="switchSowSection('sow-conclusion')" id="btn-sow-conclusion" class="sow-tab-btn w-full text-left px-4 py-3 rounded-lg text-xs font-mono flex items-center justify-between transition-all duration-200">
+                <span class="truncate">SOW-14: Project Conclusion</span>
+                <span class="text-gray-600">→</span>
+              </button>
+
+              <button onclick="switchSowSection('sow-references')" id="btn-sow-references" class="sow-tab-btn w-full text-left px-4 py-3 rounded-lg text-xs font-mono flex items-center justify-between transition-all duration-200">
+                <span class="truncate">SOW-15: Official References</span>
+                <span class="text-gray-600">→</span>
+              </button>
+            </div>
+
+            <!-- Right Panel: Rich Readable Viewer showing active document context -->
+            <div class="lg:col-span-8 bg-[#151E2E] border border-white/5 rounded-2xl p-8 min-h-[580px] flex flex-col justify-between shadow-2xl relative overflow-hidden">
+              <div class="absolute right-0 top-0 w-24 h-24 bg-[#FF9900]/5 rounded-full filter blur-md"></div>
+                       <div id="sow-display-container" class="prose prose-invert max-w-none text-sm leading-relaxed text-gray-300">
+                
+                <!-- 1. Executive Summary SOW Component -->
+                <div id="sow-exec" class="sow-content space-y-6">
+                  <div class="border-b border-white/10 pb-4">
+                    <span class="text-xs font-mono text-[#FF9900] uppercase font-bold tracking-wider">Statement of Work — Section 1</span>
+                    <h3 class="text-2xl font-display font-bold text-white mt-1">SOW-01: Executive Summary</h3>
+                  </div>
+                  <div class="space-y-4">
+                    <p class="text-gray-400 font-mono text-xs">OFFICIAL CLOUD PROJECT ROADMAP & CAMPUS CAPSTONE STUDY</p>
+                    <div class="bg-[#111823] border border-white/5 p-6 rounded-xl space-y-3 font-mono text-xs text-gray-300">
+                      <div><span class="text-gray-500">PROJECT TITLE:</span> Cloud-Driven Infrastructure Resilience and Security for Airtel Nigeria</div>
+                      <div><span class="text-gray-500">AUTHOR:</span> Abdus-somad Olanrewaju Gbadamosi (Airtel Africa Tech Fellow)</div>
+                      <div><span class="text-gray-500">SPONSOR:</span> AWS Student Builder Group & Airtel Africa Foundation</div>
+                      <div><span class="text-gray-500">AFFILIATION:</span> University of Ilorin, Nigeria</div>
+                      <div><span class="text-gray-500">STATUS:</span> Final Capstone Release • Q2 2026</div>
+                    </div>
+                    <p class="font-sans text-gray-300 leading-relaxed">
+                      <strong>Airtel Nigeria</strong>, the country's second-largest mobile network operator with over 57 million subscribers, faces a serious and well-documented infrastructure problem. Fibre cables that carry network signals to base stations are being cut at a rate the company itself has confirmed averages <strong>43 incidents every single day</strong>. Generator batteries and fuel are being stolen from remote sites. Equipment is being vandalised. Each of these events causes a network outage, and under the current operational model, the company only finds out about them after subscribers have already lost service.
+                    </p>
+                    <p class="font-sans text-gray-300 leading-relaxed">
+                      This Statement of Work proposes a cloud-based monitoring and automated alert system built on Amazon Web Services (AWS). The platform uses smart sensors at base station sites to continuously send health data into AWS. When something goes wrong, cloud services detect it instantly, identify what type of problem has occurred, and automatically send alerts to the right field team with everything they need to respond. The entire process takes seconds rather than the hours the current reactive model requires.
+                    </p>
+                    <div class="p-4 bg-[#FF9900]/10 border border-[#FF9900]/20 rounded-xl">
+                      <p class="text-xs font-mono text-[#FF9900] font-bold uppercase mb-1">CORE PURPOSE</p>
+                      <p class="text-xs font-sans text-gray-300 leading-relaxed">
+                        This platform does not attempt to stop vandalism from happening. Its purpose is to make sure Airtel finds out about it within seconds instead of hours, so the gap between physical damage and network restoration becomes as short as possible.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+ 
+                <!-- 2. Company Background SOW Component -->
+                <div id="sow-background" class="sow-content hidden space-y-6">
+                  <div class="border-b border-white/10 pb-4">
+                    <span class="text-xs font-mono text-[#FF9900] uppercase font-bold tracking-wider">Statement of Work — Section 2</span>
+                    <h3 class="text-2xl font-display font-bold text-white mt-1">SOW-02: Company Background</h3>
+                  </div>
+                  <div class="space-y-4 font-sans text-gray-300 leading-relaxed">
+                    <p>
+                      <strong class="text-white">2.1 About Airtel Africa Plc</strong><br/>
+                      Airtel Africa Plc is one of the largest telecommunications companies on the African continent. It operates across 14 countries in sub-Saharan Africa and is listed on both the Nigerian Stock Exchange (NGX) and the London Stock Exchange (LSE). Its Nigerian subsidiary, Airtel Nigeria, serves over 57 million subscribers across all 36 states of Nigeria and the Federal Capital Territory, providing mobile voice calls, internet data services, and digital financial services via Airtel Money.
+                    </p>
+                    <p>
+                      <strong class="text-white">2.2 The Nigerian Telecommunications Sector</strong><br/>
+                      The Nigerian Communications Commission (NCC) reports that the country has over 145,000 active base stations. The digital economy is a major part of Nigeria's overall economy, contributing approximately <strong class="text-white">18% of GDP</strong> in the fourth quarter of 2024. Recognising this importance, President Bola Ahmed Tinubu signed the Critical National Information Infrastructure (CNII) Order on June 24, 2024, classifying telecom structures as critical national assets and making damage to them a serious criminal offence.
+                    </p>
+                    <p>
+                      <strong class="text-white">2.3 Airtel Nigeria's Competitive Position</strong><br/>
+                      In the Nigerian market, Airtel competes directly with MTN Nigeria (approx. 87 million subscribers). Both operate in the same physical threats environment. Because subscribers have Frictionless Mobile Number Portability, network reliability is a direct factor in customer retention; a user experiencing repetitive failures will quickly switch to a competitor.
+                    </p>
+                  </div>
+                </div>
+ 
+                <!-- 3. Ground Research Findings SOW Component -->
+                <div id="sow-research" class="sow-content hidden space-y-6">
+                  <div class="border-b border-white/10 pb-4">
+                    <span class="text-xs font-mono text-[#FF9900] uppercase font-bold tracking-wider">Statement of Work — Section 3</span>
+                    <h3 class="text-2xl font-display font-bold text-white mt-1">SOW-03: Research Findings</h3>
+                  </div>
+                  <div class="space-y-4">
+                    <p class="font-sans text-gray-300">
+                      All findings in this section are backed by public sources including Airtel’s public statements, NCC data, ALTON, and reporting from BusinessDay NG, Legit.ng, France24 (AFP), and Blueprint Newspapers:
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 my-2">
+                      <div class="bg-[#111823] p-4 rounded-xl border border-white/5">
+                        <span class="text-xs text-gray-500 block font-mono">DAILY FIBRE CUTS</span>
+                        <span class="text-lg font-bold text-red-500 font-mono">43 Cuts/Day</span>
+                        <p class="text-[11px] text-gray-400 mt-1 font-sans">Self-reported average across Airtel Nigeria network (BusinessDay NG, April 2025).</p>
+                      </div>
+                      <div class="bg-[#111823] p-4 rounded-xl border border-white/5">
+                        <span class="text-xs text-gray-500 block font-mono">ANNUAL REPAIR COST</span>
+                        <span class="text-lg font-bold text-white font-mono">$23M</span>
+                        <p class="text-[11px] text-gray-400 mt-1 font-sans">Industry-wide cost of fibre damage repairs in Nigeria in 2023 (France24 / AFP, August 2025).</p>
+                      </div>
+                      <div class="bg-[#111823] p-4 rounded-xl border border-white/5">
+                        <span class="text-xs text-gray-500 block font-mono">NATIONWIDE OUTAGES</span>
+                        <span class="text-lg font-bold text-white font-mono">577 Outages</span>
+                        <p class="text-[11px] text-gray-400 mt-1 font-sans">Total outages recorded across operator sites in just Q1 2026 (Blueprint Newspapers, May 2026).</p>
+                      </div>
+                      <div class="bg-[#111823] p-4 rounded-xl border border-white/5">
+                        <span class="text-xs text-gray-500 block font-mono">AUXILIARY THEFT LOSS</span>
+                        <span class="text-lg font-bold text-red-500 font-mono">N2.3 Billion</span>
+                        <p class="text-[11px] text-gray-400 mt-1 font-sans">Value of generator equipment & batteries stolen from sites in 2025 (Blueprint newspapers, May 2026).</p>
+                      </div>
+                    </div>
+                    <p class="font-sans text-gray-300">
+                      <strong class="text-white">3.4 The Detection Gap: Where Downtime Really Accumulates</strong><br/>
+                      The structural operational bottleneck is that a base station fault is typically discovered only after subscribers start calling to complain. This delayed detection method keeps sites offline for several hours and severely impacts service level agreements.
+                    </p>
+                  </div>
+                </div>
+ 
+                <!-- 4. Problem Statement SOW Component -->
+                <div id="sow-problem" class="sow-content hidden space-y-6">
+                  <div class="border-b border-white/10 pb-4">
+                    <span class="text-xs font-mono text-[#FF9900] uppercase font-bold tracking-wider">Statement of Work — Section 4</span>
+                    <h3 class="text-2xl font-display font-bold text-white mt-1">SOW-04: Problem Statement</h3>
+                  </div>
+                  <div class="space-y-4 font-sans text-gray-300 leading-relaxed">
+                    <p>
+                      The central problem Airtel Nigeria faces is not vandalism itself. Vandalism cannot be solved from a cloud platform. The real problem is that when infrastructure damage occurs at a remote base station, Airtel does not know about it quickly enough to minimise the impact on subscribers. The detection gap between physical failure and operational response is where the majority of subscriber-facing downtime accumulates.
+                    </p>
+                    <p class="font-semibold text-white">Three Specific Operational Dimensions:</p>
+                    <ul class="list-decimal pl-5 space-y-2 text-xs text-gray-400">
+                      <li><strong class="text-gray-200">Fibre Cable Cuts at Remote Sites:</strong> With 43 cuts daily, each cut interrupts signal transmission at the affected site, taking thousands of subscribers offline simultaneously. In rural areas, a single site is the only source of connectivity.</li>
+                      <li><strong class="text-gray-200">Power Equipment Theft at Base Stations:</strong> Stolen generator equipment and backup batteries leave base stations completely dependent on an unreliable national electricity grid. Power failures go undetected until the site goes completely dark.</li>
+                      <li><strong class="text-gray-200">No Real-Time Visibility into Site Health:</strong> There is no cloud-connected system that can see a fibre signal dropping or backup power discharging and immediately alert tech crews. Everything depends on delayed customer complaints.</li>
+                    </ul>
+                  </div>
+                </div>
+ 
+                <!-- 5. Business Impact SOW Component -->
+                <div id="sow-impact" class="sow-content hidden space-y-6">
+                  <div class="border-b border-white/10 pb-4">
+                    <span class="text-xs font-mono text-[#FF9900] uppercase font-bold tracking-wider">Statement of Work — Section 5</span>
+                    <h3 class="text-2xl font-display font-bold text-white mt-1">SOW-05: Business Impact</h3>
+                  </div>
+                  <div class="space-y-4 font-sans text-gray-300 leading-relaxed">
+                    <p>
+                      <strong class="text-white">5.1 Revenue Loss</strong><br/>
+                      Every hour a base station is offline represents direct lost revenue from subscribers who cannot utilize call or data credits. Lagos-based operators lost an estimated N5 billion to infrastructure damage in 2024 alone.
+                    </p>
+                    <p>
+                      <strong class="text-white">5.2 Regulatory Penalties</strong><br/>
+                      The NCC enforces strict QoS standards. In October 2025, Airtel was fined N45 million for QoS service violations alongside two competitors. In May 2025, Airtel was also fined N104 million for SIM registration violations in Kano State. Faster fault detection reduces outages and mitigates regulatory penalty exposures completely.
+                    </p>
+                    <p>
+                      <strong class="text-white">5.3 Subscriber Churn</strong><br/>
+                      Because number portability allows seamless switching, a customer repeatedly experiencing outages will move directly to a competitor. Faster restoration is a pillar of subscriber retention.
+                    </p>
+                  </div>
+                </div>
+ 
+                <!-- 6. Proposed AWS Solution SOW Component -->
+                <div id="sow-solution" class="sow-content hidden space-y-6">
+                  <div class="border-b border-white/10 pb-4">
+                    <span class="text-xs font-mono text-[#FF9900] uppercase font-bold tracking-wider">Statement of Work — Section 6</span>
+                    <h3 class="text-2xl font-display font-bold text-white mt-1">SOW-06: Proposed AWS Solution</h3>
+                  </div>
+                  <div class="space-y-4 text-xs font-sans text-gray-300">
+                    <p class="text-sm leading-relaxed text-gray-300">
+                      We propose a cloud-based monitoring and automated response platform built on six AWS services, designed around the robust <strong>AWS Well-Architected Framework</strong>:
+                    </p>
+                    <div class="space-y-3 mt-2">
+                      <div class="bg-[#111823] p-4 rounded-xl border border-white/5">
+                        <strong class="text-[#FF9900] block mb-1">AWS IoT Core</strong>
+                        Receives continuous readings on fibre loops, battery voltages, and fuel gauges. Uses cellular connections independent of the monitored fibre link, keeping telemetry active even when the physical fibre is completely cut.
+                      </div>
+                      <div class="bg-[#111823] p-4 rounded-xl border border-white/5">
+                        <strong class="text-[#FF9900] block mb-1">Amazon CloudWatch</strong>
+                        Continuously monitors telemetry streams; raises an alert the moment a reading is out-of-bounds without human delay, powering clean status dashboards for the NOC.
+                      </div>
+                      <div class="bg-[#111823] p-4 rounded-xl border border-white/5">
+                        <strong class="text-[#FF9900] block mb-1">AWS Lambda</strong>
+                        Runs serverless response logic, classifying types of faults based on incoming indicators and pulling responsible zone details instantly.
+                      </div>
+                      <div class="bg-[#111823] p-4 rounded-xl border border-white/5">
+                        <strong class="text-[#FF9900] block mb-1">Amazon DynamoDB</strong>
+                        A durable NoSQL registry of base stations and a historic log of every incident, which serves as a clean compliance audit trail for the NCC.
+                      </div>
+                      <div class="bg-[#111823] p-4 rounded-xl border border-white/5">
+                        <strong class="text-[#FF9900] block mb-1">Amazon SNS</strong>
+                        Evaluates alert severity and sends instant, targeted text/SMS alerts to local zone field crews and dashboards automatically.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+ 
+                <!-- 7. Architecture Overview SOW Component -->
+                <div id="sow-architecture" class="sow-content hidden space-y-6">
+                  <div class="border-b border-white/10 pb-4">
+                    <span class="text-xs font-mono text-[#FF9900] uppercase font-bold tracking-wider">Statement of Work — Section 7</span>
+                    <h3 class="text-2xl font-display font-bold text-white mt-1">SOW-07: Architecture Overview</h3>
+                  </div>
+                  <div class="space-y-4 text-xs font-mono text-gray-400">
+                    <p class="font-sans text-gray-300 text-sm mb-2">Step-by-Step Data Flow Architecture:</p>
+                    <div class="space-y-3">
+                      <p><strong class="text-white block mb-0.5">Step 1: Incident Occurs</strong> Fibre cable severed, fuel drops, or cabin is vandalized. Readings are registered instantly by the monitoring device.</p>
+                      <p><strong class="text-white block mb-0.5">Step 2: IoT Core Ingress</strong> Device transmits readings via out-of-band mobile data, bypassing local terrestrial fibre links.</p>
+                      <p><strong class="text-white block mb-0.5">Step 3: CloudWatch Monitoring</strong> Automatically raises alarms on threshold breaches without human intervention.</p>
+                      <p><strong class="text-white block mb-0.5">Step 4: Lambda Response Code</strong> Runs serverless incident analysis, classifying faults and pulling mapping data.</p>
+                      <p><strong class="text-white block mb-0.5">Step 5: DynamoDB Logging</strong> Creates a durable NoSQL incident record capturing exact detection timing metrics.</p>
+                      <p><strong class="text-white block mb-0.5">Step 6: SNS Delivery</strong> Hits assigned area crew mobile terminals with detailed maps and parameters in seconds.</p>
+                      <p><strong class="text-white block mb-0.5">Step 7: AWS IAM & CloudTrail Security</strong> Least-privilege configuration runs throughout, logging activities securely.</p>
+                    </div>
+                  </div>
+                </div>
+ 
+                <!-- 8. Implementation Approach SOW Component -->
+                <div id="sow-implementation" class="sow-content hidden space-y-6">
+                  <div class="border-b border-white/10 pb-4">
+                    <span class="text-xs font-mono text-[#FF9900] uppercase font-bold tracking-wider">Statement of Work — Section 8</span>
+                    <h3 class="text-2xl font-display font-bold text-white mt-1">SOW-08: Implementation Approach</h3>
+                  </div>
+                  <div class="space-y-4 text-xs font-sans text-gray-300 leading-relaxed">
+                    <p class="text-sm">We propose a 4-Phase rollout schedule constructed for low risk and continuous validation:</p>
+                    <div class="space-y-3">
+                      <div class="bg-[#111823] p-4 rounded-xl border border-white/5">
+                        <strong class="text-[#FF9900] font-mono block mb-1">Phase 1: Foundation (Months 1-2)</strong>
+                        Configures the security credentials, database tables in DynamoDB (site registration metadata, incident tracking structures), CloudWatch alarms, and baseline system permissions. No hardware is deployed.
+                      </div>
+                      <div class="bg-[#111823] p-4 rounded-xl border border-white/5">
+                        <strong class="text-[#FF9900] font-mono block mb-1">Phase 2: Pilot Deployment (Months 3-4)</strong>
+                        Deployment across 50 base stations in Lagos Mainland West (including Alimosho and Mainland), identified as high-theft corridors (BusinessDay NG, 2025). Gathers real incident data to align thresholds.
+                      </div>
+                      <div class="bg-[#111823] p-4 rounded-xl border border-white/5">
+                        <strong class="text-[#FF9900] font-mono block mb-1">Phase 3: Refinement (Months 5-6)</strong>
+                        Adjusts alarm profiles, reduces false anomalies in CloudWatch, updates routing logic in Lambda, and incorporates reporting dashboards in DynamoDB analytics.
+                      </div>
+                      <div class="bg-[#111823] p-4 rounded-xl border border-white/5">
+                        <strong class="text-[#FF9900] font-mono block mb-1">Phase 4: National Rollout (Month 7 Onwards)</strong>
+                        Scales deployment based on incident frequency prioritizations. Targets fault detection to field team alert delivery within two minutes.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+ 
+                <!-- 9. Security considerations SOW Component -->
+                <div id="sow-security" class="sow-content hidden space-y-6">
+                  <div class="border-b border-white/10 pb-4">
+                    <span class="text-xs font-mono text-[#FF9900] uppercase font-bold tracking-wider">Statement of Work — Section 9</span>
+                    <h3 class="text-2xl font-display font-bold text-white mt-1">SOW-09: Security Considerations</h3>
+                  </div>
+                  <div class="space-y-4 font-sans text-gray-300 leading-relaxed">
+                    <p>
+                      <strong class="text-white">9.1 Access Control:</strong> Services utilize fine-grained IAM roles to maintain least-privilege constraints. Humans accessing dashboards require mandatory multi-factor Cognito authentication.
+                    </p>
+                    <p>
+                      <strong class="text-white">9.2 Data Protection:</strong> All records in DynamoDB are encrypted at rest with AWS-managed keys. Payloads traveling across services use TLS 1.3 encryption in-transit.
+                    </p>
+                    <p>
+                      <strong class="text-white">9.3 Audit Trail:</strong> AWS CloudTrail records every user and service action, producing immutable system histories to support incident reviews and corporate QoS validation.
+                    </p>
+                    <p>
+                      <strong class="text-white">9.4 NDPR Compliance:</strong> Adheres to the Nigeria Data Protection Regulation (NDPR) constraints regarding storage, encryption, and limited retention of personal or operator information.
+                    </p>
+                  </div>
+                </div>
+ 
+                <!-- 10. Scalability & Reliability SOW Component -->
+                <div id="sow-reliability" class="sow-content hidden space-y-6">
+                  <div class="border-b border-white/10 pb-4">
+                    <span class="text-xs font-mono text-[#FF9900] uppercase font-bold tracking-wider">Statement of Work — Section 10</span>
+                    <h3 class="text-2xl font-display font-bold text-white mt-1">SOW-10: Reliability and Scalability</h3>
+                  </div>
+                  <div class="space-y-4 font-sans text-gray-300 leading-relaxed">
+                    <p>
+                      <strong class="text-white">10.1 Multi-Incident Parallelism</strong><br/>
+                      Organised theft or extreme regional weather can knock out several sites in parallel. Under stress, serverless AWS Lambda isolates individual alarms, spawning parallel processing runs instantly to guarantee equal performance under load.
+                    </p>
+                    <p>
+                      <strong class="text-white">10.2 Global Availability</strong><br/>
+                      DynamoDB replicates records across multiple geographic physical data centers. Point-in-time recovery protects logs from administrative mishaps up to 35 days.
+                    </p>
+                    <p>
+                      <strong class="text-white">10.3 Platform High Availability</strong><br/>
+                      Selected services maintain AWS Service Level Agreements guaranteeing 99.9% uptime or better, certifying that the monitor system remains alive even if physical segments go dark.
+                    </p>
+                  </div>
+                </div>
+ 
+                <!-- 11. Cost considerations SOW Component -->
+                <div id="sow-cost" class="sow-content hidden space-y-6">
+                  <div class="border-b border-white/10 pb-4">
+                    <span class="text-xs font-mono text-[#FF9900] uppercase font-bold tracking-wider">Statement of Work — Section 11</span>
+                    <h3 class="text-2xl font-display font-bold text-white mt-1">SOW-11: Cost Considerations</h3>
+                  </div>
+                  <div class="space-y-4 font-sans text-xs text-gray-300 leading-relaxed">
+                    <p class="text-sm">
+                      Billing adapts strictly to consumption. Estimated monthly costs below are computed using the AWS Calculator for a 50,000-site deployment:
+                    </p>
+                    <div class="bg-[#111823] p-4 rounded-xl border border-white/5 space-y-2 mt-2">
+                      <div class="flex justify-between border-b border-white/5 pb-1"><span class="font-bold">Service / Detail</span><span class="font-bold font-mono">Cost (USD)</span></div>
+                      <div class="flex justify-between"><span>AWS IoT Core (12 reads/hr from 50k sites)</span><span class="font-mono">$3,456.00</span></div>
+                      <div class="flex justify-between"><span>Amazon CloudWatch (Dashboards & Logging)</span><span class="font-mono">$450.00</span></div>
+                      <div class="flex justify-between"><span>AWS Lambda (500,000 runs/mo)</span><span class="font-mono">$200.00</span></div>
+                      <div class="flex justify-between"><span>Amazon DynamoDB (Read/Write allocations)</span><span class="font-mono">$180.00</span></div>
+                      <div class="flex justify-between"><span>Amazon SNS (SMS notification blocks)</span><span class="font-mono">$300.00</span></div>
+                      <div class="flex justify-between"><span>Cognito Identity pools (500 operators staff)</span><span class="font-mono">$50.00</span></div>
+                      <div class="flex justify-between border-t border-white/10 pt-1 font-bold"><span class="text-[#FF9900]">TOTAL EXPECTED COSTS</span><span class="font-mono">$4,636.00 / mo</span></div>
+                    </div>
+                    <p class="text-[11px] text-gray-400 font-sans mt-2">
+                      In context: Lagos operators lost N5 billion in 2024. Fines cost N45 million. Resolving a single major outage pays for months of AWS operating costs.
+                    </p>
+                  </div>
+                </div>
+ 
+                <!-- 12. Expected benefits SOW Component -->
+                <div id="sow-benefits" class="sow-content hidden space-y-6">
+                  <div class="border-b border-white/10 pb-4">
+                    <span class="text-xs font-mono text-[#FF9900] uppercase font-bold tracking-wider">Statement of Work — Section 12</span>
+                    <h3 class="text-2xl font-display font-bold text-white mt-1">SOW-12: Expected Benefits</h3>
+                  </div>
+                  <div class="space-y-4 font-sans text-gray-300 leading-relaxed">
+                    <p>
+                      <strong class="text-white">12.1 Operational Benefits</strong><br/>
+                      - Reduces fault detection time from hours down to under 2 minutes.<br/>
+                      - Eliminates diagnostic times on-site; crews arrive possessing location and system parameters.<br/>
+                      - Provides real-time visibility with CloudWatch.
+                    </p>
+                    <p>
+                      <strong class="text-white">12.2 Financial Benefits</strong><br/>
+                      - Reduces hardware damage by blocking secondary deterioration loops.<br/>
+                      - Mitigates direct exposure to NCC QoS SLA violations and fines.<br/>
+                      - Lowers subscriber churn risk.
+                    </p>
+                    <p>
+                      <strong class="text-white">12.3 Governance Benefits</strong><br/>
+                      - CloudTrail provides clean logs for NCC SLA audits.<br/>
+                      - Ensures compliant operational data storage under NDPR guidelines.
+                    </p>
+                  </div>
+                </div>
+ 
+                <!-- 13. Limitations SOW Component -->
+                <div id="sow-limitations" class="sow-content hidden space-y-6">
+                  <div class="border-b border-white/10 pb-4">
+                    <span class="text-xs font-mono text-[#FF9900] uppercase font-bold tracking-wider">Statement of Work — Section 13</span>
+                    <h3 class="text-2xl font-display font-bold text-white mt-1">SOW-13: Limitations & Assumptions</h3>
+                  </div>
+                  <div class="space-y-4 font-sans text-gray-300 leading-relaxed font-sans">
+                    <p>
+                      <strong class="text-white">13.1 Limitations:</strong><br/>
+                      - Focuses purely on detection and alert gaps. Physical vandalism cannot be prevented; it requires law enforcement coordination.<br/>
+                      - Assumes the site has access to a mobilised network cellular connection independent of the local fiber link.<br/>
+                      - Physical sensor placement across Airtel’s estate represents a separate logistics and capital project.
+                    </p>
+                    <p>
+                      <strong class="text-white">13.2 Assumptions:</strong><br/>
+                      - Compatible out-of-band cellular sensor modems are available to transmit messages to AWS IoT Core.<br/>
+                      - Field crews possess mobile devices for SMS notifications.<br/>
+                      - Independent mobile data feeds are stable at 80% of monitored nodes.
+                    </p>
+                  </div>
+                </div>
+ 
+                <!-- 14. Conclusion SOW Component -->
+                <div id="sow-conclusion" class="sow-content hidden space-y-6">
+                  <div class="border-b border-white/10 pb-4">
+                    <span class="text-xs font-mono text-[#FF9900] uppercase font-bold tracking-wider">Statement of Work — Section 14</span>
+                    <h3 class="text-2xl font-display font-bold text-white mt-1">SOW-14: Project Conclusion</h3>
+                  </div>
+                  <div class="space-y-4 font-sans text-gray-300 leading-relaxed font-sans mt-3">
+                    <p>
+                      Nigeria's digital economy is growing faster than the physical infrastructure supporting it can be protected. Airtel Nigeria, serving over 57 million subscribers on a network that sustains more than 43 documented fibre cuts per day, operates in an environment where the response to physical infrastructure failure determines how much of that damage subscribers actually experience as lost service.
+                    </p>
+                    <p>
+                      This proposed solution does not solve vandalism. What it does is ensure that Airtel finds out about physical infrastructure failures within seconds rather than hours. By connecting base station sensors to cloud-based monitoring through AWS IoT Core, detecting anomalies automatically through Amazon CloudWatch, running response logic through AWS Lambda, storing incident records in Amazon DynamoDB, and delivering targeted alerts through Amazon SNS, the platform turns a reactive model that depends on subscriber complaints into an automated one that acts before subscribers notice anything is wrong.
+                    </p>
+                    <p class="font-mono text-xs text-gray-400 mt-4">
+                      "I designed a cloud solution around what the data actually showed, using six AWS services that each solve one specific part of the detection problem. This is the kind of engineering I want to spend my career doing." — Abdus-somad Olanrewaju Gbadamosi
+                    </p>
+                  </div>
+                </div>
+ 
+                <!-- 15. References SOW Component -->
+                <div id="sow-references" class="sow-content hidden space-y-6">
+                  <div class="border-b border-white/10 pb-4">
+                    <span class="text-xs font-mono text-[#FF9900] uppercase font-bold tracking-wider">Statement of Work — Section 15</span>
+                    <h3 class="text-2xl font-display font-bold text-white mt-1">SOW-15: References</h3>
+                  </div>
+                  <div class="space-y-3 font-mono text-xs text-gray-400 mt-3">
+                    <p>Airtel Africa Plc. Annual Report and Accounts 2023/2024. London Stock Exchange investor relations filing.</p>
+                    <p>BusinessDay NG. "Subscribers hit as telco towers turn targets for vandals." April 1, 2025. businessday.ng</p>
+                    <p>Business AM Live. "Nigeria's digital backbone faces early-year shock from rising fibre damage." February 23, 2026. businessamlive.com</p>
+                    <p>Blueprint Newspapers. "How surge in attacks on telecoms infrastructure slows digital economy growth." May 2026. blueprint.ng</p>
+                    <p>France24 / AFP. "Vandalism hobbles Nigeria's mobile telephone services." August 29, 2025. france24.com</p>
+                    <p>Legit.ng. "Network Disrupts Calls, Data, Subscribers Call on MTN, Airtel, Others for Solution." June 4, 2025. legit.ng</p>
+                    <p>Nigerian Communications Commission (NCC). Quality of Service Regulations 2024. ncc.gov.ng</p>
+                  </div>
+                </div>
+ 
+              </div>
+              
+              <!-- Download and Meta Button -->
+              <div class="mt-8 pt-6 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p class="text-[11px] font-mono text-gray-500">Document Type: Markdown Specification (15.5 KB)</p>
+                
+                <button onclick="downloadSowDocument()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#FF9900] hover:bg-[#ffaa22] text-navy font-bold text-xs uppercase tracking-wider transition-all duration-300 shadow-md shadow-[#FF9900]/10 flex items-center justify-center space-x-2">
+                  <span>📥</span>
+                  <span>Download Full SOW.md</span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- RECRUITER DELIGHT: AWS AMPLIFY DEPLOYMENT & PRICING GUIDE -->
+          <div class="bg-gradient-to-br from-[#111823] to-[#162030] border border-white/5 rounded-3xl p-8 md:p-12 relative overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-[1.5px] bg-gradient-to-r from-transparent via-[#FF9900]/30 to-transparent"></div>
+            
+            <div class="flex flex-col lg:flex-row gap-8 items-start justify-between relative z-10">
+              <div class="space-y-4 max-w-2xl">
+                <span class="text-[10px] font-mono text-[#FF9900] uppercase font-bold tracking-widest bg-[#FF9900]/10 border border-[#FF9900]/30 px-2.5 py-1 rounded">AWS Deployment Specs</span>
+                <h3 class="text-xl md:text-2xl font-display font-bold text-white">How This Site Deploys to AWS Amplify</h3>
+                <p class="text-sm text-gray-400 leading-relaxed font-sans">
+                  As an AWS builder dedicated to efficiency, I avoid standard hosting servers like Netlify. Deploying this React, HTML, CSS, and JS bundle directly to <strong class="text-white font-medium">AWS Amplify Hosting</strong> is straightforward, cost-optimized, and handles custom DNS routing smoothly.
+                </p>
+
+                <!-- Step layout -->
+                <div class="space-y-3 pt-2 text-xs font-mono text-gray-300">
+                  <div class="flex items-start space-x-2">
+                    <span class="text-[#FF9900]">1.</span>
+                    <span>Commit this codebase to GitHub and navigate to the AWS Console.</span>
+                  </div>
+                  <div class="flex items-start space-x-2">
+                    <span class="text-[#FF9900]">2.</span>
+                    <span>Open <strong>AWS Amplify</strong>, select "New App" → "Host web app" and bind to your GitHub repo.</span>
+                  </div>
+                  <div class="flex items-start space-x-2">
+                    <span class="text-[#FF9900]">3.</span>
+                    <span>Accept default server build configurations (Vite build settings mapping `dist/`) and hit deploy.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- AWS Pricing Model Panel -->
+              <div class="w-full lg:w-80 shrink-0 bg-[#090D16]/80 border border-white/5 p-6 rounded-2xl relative">
+                <span class="absolute top-4 right-4 text-xs font-mono text-[#C8102E] font-bold">100% FREE TIER</span>
+                <h4 class="text-xs font-mono uppercase tracking-widest text-[#FF9900] mb-4">AWS Amplify Pricing Specs</h4>
+                <div class="space-y-3 divide-y divide-white/5">
+                  <div class="pb-3 text-xs">
+                    <p class="text-gray-500 font-mono">Amplify Free Tier Includes:</p>
+                    <p class="text-white font-semibold mt-1">1,000 Build Minutes/mo (First 12 mo)</p>
+                    <p class="text-white font-semibold mt-0.5">15 GB Served/mo & 5 GB Storage</p>
+                  </div>
+                  <div class="py-3 text-xs">
+                    <p class="text-gray-500 font-mono">My Actual Expected Monthly Costs:</p>
+                    <p class="text-3xl font-display font-extrabold text-white mt-1">$0.00 / mo</p>
+                    <p class="text-[10px] text-gray-400 mt-1 font-sans">This portfolio completely operates within the standard AWS Free Tier.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 6. ABOUT ME SECTION -->
+      <section id="about" class="reveal-on-scroll py-24 px-6 md:px-12 bg-[#0C1220] border-t border-white/5 relative">
+        <div class="max-w-4xl mx-auto">
+          <!-- Small Label -->
+          <div class="inline-flex items-center space-x-2 bg-gray-800 border border-gray-700 px-3 py-1 rounded-full mb-4">
+            <span class="text-xs font-mono font-bold tracking-widest text-gray-300 uppercase">Project Architect</span>
+          </div>
+
+          <div class="bg-gradient-to-br from-[#121A2A] to-[#182338] border border-white/5 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+            <!-- Decorative colored backdrops -->
+            <div class="absolute -right-20 -top-20 w-60 h-60 bg-[#FF9900]/10 rounded-full filter blur-xl"></div>
+            <div class="absolute -left-20 -bottom-20 w-60 h-60 bg-[#C8102E]/10 rounded-full filter blur-xl"></div>
+
+            <div class="relative z-10">
+              <!-- Grid Layout for Personal Card -->
+              <div class="flex flex-col md:flex-row md:items-start justify-between gap-8 mb-8">
+                <div>
+                  <h3 class="text-2xl md:text-3.5xl font-display font-extrabold text-white leading-tight">
+                    Abdus-somad Olanrewaju Gbadamosi
+                  </h3>
+                  <p class="text-sm font-mono text-[#FF9900] uppercase tracking-wider mt-2">
+                    Computer Engineering Undergrad • University of Ilorin, Nigeria
+                  </p>
+                  
+                  <div class="flex flex-wrap gap-2 mt-4">
+                    <span class="text-[11px] font-mono bg-[#FF9900]/15 border border-[#FF9900]/30 text-[#FF9900] px-3 py-1 rounded-full">
+                      Airtel Africa Tech Fellow
+                    </span>
+                    <span class="text-[11px] font-mono bg-[#C8102E]/15 border border-[#C8102E]/30 text-red-400 px-3 py-1 rounded-full">
+                      AWS Student Builder Unilorin
+                    </span>
+                    <span class="text-[11px] font-mono bg-white/5 border border-white/10 text-gray-300 px-3 py-1 rounded-full">
+                      Cowrywise Ambassador
+                    </span>
+                    <span class="text-[11px] font-mono bg-white/5 border border-white/10 text-gray-300 px-3 py-1 rounded-full">
+                      IEEE Student candidate
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Minimal personal emblem -->
+                <div class="w-16 h-16 rounded-2xl bg-[#1A2433] border border-white/10 flex items-center justify-center font-display font-black text-2xl text-white shadow-inner select-none shrink-0">
+                  AG
+                </div>
+              </div>
+
+              <!-- Personal Statement Block (as requested, verbatim with accurate formatting) -->
+              <div class="border-t border-white/5 pt-6 text-gray-300 leading-relaxed text-sm md:text-base mb-8">
+                <p>
+                  "I chose this project because I am an Airtel subscriber and a Tech Fellow. The evidence I found did not come from assumptions. Airtel's own representatives confirmed 43 fibre cuts every day. The NCC published the fines. Blueprint Newspapers reported the outage numbers. I designed a cloud solution around what the data actually showed, using six AWS services that each solve one specific part of the detection problem. This is the kind of engineering I want to spend my career doing."
+                </p>
+              </div>
+
+              <!-- Social links buttons -->
+              <div class="flex flex-wrap gap-4 border-t border-white/5 pt-6">
+                <!-- LinkedIn Link -->
+                <a href="https://www.linkedin.com/in/abdus-somad-gbadamosi-08b435230" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-navy-light text-white font-semibold text-xs tracking-wider uppercase border border-white/10 hover:border-[#FF9900]/40 hover:bg-[#1A2433] transition-all duration-300 group">
+                  <span>Connect on LinkedIn</span>
+                  <span class="text-gray-500 group-hover:text-[#FF9900] transition-colors font-mono">↗</span>
+                </a>
+                <!-- GitHub Link -->
+                <a href="https://github.com/abdussomadgbadamosi" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-navy-light text-white font-semibold text-xs tracking-wider uppercase border border-white/10 hover:border-[#C8102E]/40 hover:bg-[#1A2433] transition-all duration-300 group">
+                  <span>GitHub Repository</span>
+                  <span class="text-gray-500 group-hover:text-[#C8102E] transition-colors font-mono">↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 7. FOOTER -->
+    <footer class="py-12 bg-[#090D16] border-t border-white/5 text-center text-xs text-gray-500 font-mono px-6">
+      <div class="max-w-4xl mx-auto space-y-3">
+        <p class="text-gray-400 font-display font-medium text-sm">
+          Airtel Infrastructural Resilience Capstone
+        </p>
+        <p>
+          AWS Student Builder Group Unilorin Bootcamp 2026
+        </p>
+        <div class="h-[1px] w-12 bg-white/10 mx-auto my-2"></div>
+        <p class="text-gray-600">
+          Designed and built by Abdus-somad Olanrewaju Gbadamosi — AWS Student Builder Group Unilorin Bootcamp 2026.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Root div is kept in template in case other scripts reference it, although not needed -->
+    <div id="root" class="hidden"></div>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

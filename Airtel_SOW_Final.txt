@@ -1,0 +1,494 @@
+
+
+AWS CLOUD CLUB UNILORIN BOOTCAMP 2026
+
+Capstone Project  |  Statement of Work
+
+Cloud-Driven Infrastructure Resilience
+
+and Security for Airtel Nigeria
+
+An AWS-Based Monitoring and Automated Incident Response Platform
+
+
+
+Prepared by:
+
+TheTechTrekkerr
+
+First-Year Computer Engineering Student, University of Ilorin
+
+Airtel Africa Foundation Tech Fellow
+
+AWS Student Builder Group, University of Ilorin
+
+Scenario A: Infrastructure Resilience and Security
+
+Submission Date: 2026
+
+
+
+1. Executive Summary
+
+Airtel Nigeria, the country's second-largest mobile network operator with over 57 million subscribers, faces a serious and well-documented infrastructure problem. Fibre cables that carry network signals to base stations are being cut at a rate the company itself has confirmed averages 43 incidents every single day. Generator batteries and fuel are being stolen from remote sites. Equipment is being vandalised. Each of these events causes a network outage, and under the current operational model, the company only finds out about them after subscribers have already lost service.
+
+This Statement of Work proposes a cloud-based monitoring and automated alert system built on Amazon Web Services (AWS). The platform uses smart sensors at base station sites to continuously send health data into AWS. When something goes wrong, cloud services detect it instantly, identify what type of problem has occurred, and automatically send alerts to the right field team with everything they need to respond. The entire process takes seconds rather than the hours the current reactive model requires.
+
+The business case for this solution is built on verified public evidence. In 2023 alone, fibre infrastructure damage cost the Nigerian telecoms industry an estimated $23 million in repairs. In just the first quarter of 2026, 577 network outages were recorded across Nigerian operators. Generator theft reached N2.3 billion in losses across 2025. In October 2025, Airtel was among the operators fined under the Nigerian Communications Commission (NCC) enforcement framework. Each of these documented costs can be reduced when faults are detected faster and teams are dispatched sooner.
+
+CORE PURPOSE
+
+This platform does not attempt to stop vandalism from happening. Its purpose is to make sure Airtel finds out about it within seconds instead of hours, so the gap between physical damage and network restoration becomes as short as possible.
+
+
+
+
+
+2. Background of the Company
+
+2.1 About Airtel Africa Plc
+
+Airtel Africa Plc is one of the largest telecommunications companies on the African continent. It operates across 14 countries in sub-Saharan Africa and is listed on both the Nigerian Stock Exchange (NGX) and the London Stock Exchange (LSE). Its Nigerian subsidiary, Airtel Nigeria, is the second-largest mobile network operator in the country by subscriber numbers, operating behind MTN Nigeria.
+
+Airtel Nigeria serves over 57 million subscribers across all 36 states of Nigeria and the Federal Capital Territory. The company provides mobile voice calls, internet data services, and digital financial services through its Airtel Money platform. It operates network towers across 2G, 3G, 4G, and selected 5G frequencies.
+
+2.2 The Nigerian Telecommunications Sector
+
+Nigeria is Africa's most populous country, with a population of over 220 million people. The Nigerian Communications Commission (NCC) reports that the country has over 145,000 active base stations across the country. These base stations are the physical sites that transmit and receive mobile signals for subscribers. Without them, there is no network.
+
+The digital economy has become a major part of Nigeria's overall economy. According to data cited by AFP in August 2025, it contributed approximately 18 percent of GDP in the fourth quarter of 2024. This means that when telecom networks go down, the economic damage extends far beyond the operator. Mobile banking, digital payments, ride-hailing applications, and online businesses all depend on the same network infrastructure.
+
+Recognising this importance, President Bola Ahmed Tinubu signed the Critical National Information Infrastructure (CNII) Order on June 24, 2024. This order formally classified telecommunications infrastructure as critical national infrastructure and made deliberate damage to network equipment a criminal offence under Nigerian law. Even with this legislation in place, physical attacks on telecom infrastructure have continued and in some areas have increased.
+
+2.3 Airtel Nigeria's Competitive Position
+
+In the Nigerian market, Airtel competes most directly with MTN Nigeria, which leads with approximately 87 million subscribers. Both companies face the same regulatory requirements from the NCC and the same physical infrastructure threats. The competitive stakes are high because Nigerian subscribers have access to number portability, meaning they can switch to a different network while keeping their phone number. This makes network reliability a direct factor in subscriber retention. A customer who repeatedly loses service has a simple and frictionless path to a competitor.
+
+
+
+3. Research Findings
+
+All findings in this section come from independently published sources. These include Airtel Nigeria's own public statements, regulatory data from the NCC, statements from the Association of Licensed Telecommunications Operators of Nigeria (ALTON), and reporting from BusinessDay NG, Legit.ng, France24 (AFP), Blueprint Newspapers, and Business AM Live. No claim here relies on assumption or estimation.
+
+3.1 Infrastructure Vandalism at Documented Scale
+
+Airtel Nigeria's own representatives have confirmed to multiple independent news outlets that the company experiences an average of 43 fibre cable cuts every day on parts of its network. A source quoted in BusinessDay NG in April 2025 made the scale even clearer, saying that Airtel experiences a cable cut every six minutes. Business AM Live reported in February 2026 that this rate translates to more than 300 documented infrastructure incidents every single week.
+
+These cuts happen for different reasons. In commercial areas like Lagos, road construction frequently damages buried cables. In other areas, people steal cables in the mistaken belief that black telecom cables contain valuable copper wire. Some incidents are deliberate sabotage. Whatever the cause, the result is the same: a network site goes dark and subscribers lose service.
+
+43/day
+
+Average fibre cuts on Airtel Nigeria's network, self-reported (BusinessDay NG, April 2025)
+
+300+/week
+
+Weekly infrastructure disruptions calculated from Airtel's own daily figure (Business AM Live, Feb 2026)
+
+$23M
+
+Industry cost of fibre damage repairs in Nigeria in 2023 (France24 / AFP, August 2025)
+
+N5B
+
+Estimated losses by Lagos telecom operators from infrastructure damage in 2024 (BusinessDay NG, April 2025)
+
+577
+
+Total network outages across Nigerian telecom operators in Q1 2026 (Blueprint Newspapers, May 2026)
+
+N2.3B
+
+Value of generator equipment stolen from Nigerian telecom sites in 2025 (Blueprint Newspapers, May 2026)
+
+N45M
+
+NCC fine levied on three operators including Airtel for QoS violations, October 2025
+
+
+
+3.2 Power Infrastructure Theft
+
+Because the Nigerian electricity grid is unreliable, every base station depends on diesel generators and battery backup systems to keep running when grid power fails. These backup systems, originally installed to protect service availability, have become valuable targets for theft. Batteries are removed and resold. Generators are taken from site compounds entirely.
+
+The ALTON chairman Gbenga Adebayo, quoted in Blueprint Newspapers in May 2026, confirmed that stolen and vandalised components include power cables, rectifiers, fibre optic cables, feeder cables, diesel generators, batteries, and solar systems. Generator theft alone across the industry reached N2.3 billion in 2025. When backup power is gone, a base station that survives a fibre cut will still go offline the next time the national grid fails.
+
+3.3 Regulatory Consequences for Airtel
+
+The NCC actively monitors and enforces Quality of Service (QoS) standards for all operators. When network performance falls below required thresholds, financial penalties follow. In October 2025, Airtel Nigeria was among three operators fined a combined N45 million for QoS violations. NCC compliance audits around the same period identified cumulative industry liabilities close to N12.4 billion progressing through the enforcement process.
+
+Separately, in May 2025, the NCC fined Airtel Nigeria N104 million for SIM registration violations in Kano State. These fines establish a clear pattern: regulators are willing to name Airtel specifically and impose direct financial penalties. Every network outage caused by undetected infrastructure damage is a potential trigger for further NCC enforcement action.
+
+3.4 The Detection Gap: Where Downtime Really Accumulates
+
+The most important finding is not how often infrastructure damage occurs. It is how Airtel currently finds out about it. In the current operational model, a base station fault is typically discovered only after subscribers start calling to complain. By that point, the site has already been offline for a significant period and the damage has already been done in terms of service loss.
+
+Legit.ng reported in June 2025 that subscribers experiencing outages simply assume the network is performing poorly. They do not know a physical attack on infrastructure is the cause. This means subscriber complaints are a delayed and unreliable detection method. The platform proposed in this document addresses exactly this gap by detecting faults automatically and immediately rather than waiting for complaints to accumulate.
+
+
+
+4. Problem Statement
+
+The central problem Airtel Nigeria faces is not vandalism itself. Vandalism cannot be solved from a cloud platform. The real problem is that when infrastructure damage occurs at a remote base station, Airtel does not know about it quickly enough to minimise the impact on subscribers. The detection gap between a physical failure and an operational response is where the majority of subscriber-facing downtime accumulates.
+
+This problem has three specific dimensions that each contribute to that gap:
+
+Dimension 1: Fibre Cable Cuts at Remote Sites
+
+With 43 confirmed fibre cuts per day, Airtel's network is experiencing continuous physical damage across its infrastructure footprint. Each cut interrupts signal transmission at the affected site, which can take thousands of subscribers offline simultaneously. In rural areas, a single site may be the only source of connectivity for an entire community, and restoring service after a cut requires a field team to physically locate and repair the damaged cable. The faster that team is dispatched, the shorter the outage.
+
+Dimension 2: Power Equipment Theft at Base Stations
+
+When generator equipment and battery backups are stolen from a base station, the site becomes completely dependent on the national electricity grid. Since grid outages are frequent across Nigeria, a site that loses its backup power can go completely dark at any point after the theft, without any further physical attack. Under the current model, the missing equipment is often discovered only when a field technician visits for scheduled maintenance or when the site goes dark during a grid failure.
+
+Dimension 3: No Real-Time Visibility into Site Health
+
+The root cause connecting both dimensions above is the absence of any automated, real-time monitoring of what is happening at each base station. There is no cloud-connected system that can see a fibre signal dropping, a fuel tank running low, or a backup battery discharging unexpectedly and immediately alert someone to investigate. Without this visibility, everything depends on complaints and physical inspections, both of which are too slow for an infrastructure environment where the documented fault rate runs into the hundreds of incidents per week.
+
+SUMMARY
+
+The AWS platform proposed in this document directly addresses Dimension 3. By giving Airtel real-time visibility into the health of its base stations, it turns the detection process from a reactive one that starts with subscriber complaints into an automated one that starts the moment something begins to go wrong.
+
+
+
+
+
+5. Business Impact of the Problem
+
+5.1 Revenue Loss
+
+Every hour a base station is offline represents lost revenue from subscribers who cannot use their data bundles, make calls, or access Airtel services. In Nigeria's predominantly prepaid market, subscribers pay in advance for services they then cannot access. Multiplied across thousands of simultaneously affected users per outage, these individual losses become significant at the company level.
+
+Beyond the service revenue lost during downtime, infrastructure repair itself is a major direct cost. Lagos-based operators alone lost an estimated N5 billion to infrastructure damage in 2024. Industry-wide fibre repair costs reached $23 million in 2023. These are recurring operational expenditures that increase every year the detection and response model stays reactive.
+
+5.2 Regulatory Penalties
+
+The NCC's Quality of Service regulations require Nigerian operators to maintain minimum performance standards across network availability, call success rates, and data throughput. When outages cause these standards to be missed, operators face structured financial penalties. The enforcement actions of October 2025 (N45 million across three operators including Airtel) and May 2025 (N104 million to Airtel specifically) demonstrate that the NCC is actively enforcing these standards with named, direct penalties.
+
+Faster fault detection reduces outage duration, which reduces the frequency of QoS standard breaches, which reduces the likelihood of regulatory penalties. The connection between detection speed and regulatory exposure is direct.
+
+5.3 Subscriber Trust and Network Competition
+
+Nigeria's number portability system allows any subscriber to move to a different network while keeping their phone number. This removes the main historical barrier to switching. Subscribers who repeatedly experience service interruptions have every practical reason to consider moving to a competitor. Because network reliability is one of the primary factors cited when subscribers make porting decisions, every avoidable outage carries a churn risk that translates into long-term revenue loss.
+
+5.4 Wider Social and Economic Impact
+
+With Nigeria's digital economy contributing approximately 18 percent of GDP, the impact of network outages extends beyond Airtel's own financial position. The AFP reported in August 2025 that in many rural areas mobile phones are the only way people connect with family, access financial services, or reach emergency help. When a base station goes offline, these communities lose a critical connection to the broader economy and social systems. This context makes faster fault response not just a commercial priority but a genuine public service obligation.
+
+
+
+6. Proposed AWS Solution
+
+The proposed solution is a cloud-based monitoring and automated response platform built on six AWS services. Together these services form a connected pipeline that takes data from physical sensors at Airtel's base station sites, detects problems automatically, decides what kind of problem has occurred, and sends the right information to the right people within seconds. The platform is designed around the AWS Well-Architected Framework, which is a set of best practices for building cloud solutions that are reliable, secure, and cost-effective.
+
+The platform works in layers. Physical sensors collect data at the site. AWS receives and monitors that data in the cloud. Automated logic classifies any problems found. Alerts reach the response team immediately. And a security layer ensures only authorised people and systems can access the platform at any point.
+
+6.1 AWS Service Selection and Justification
+
+Each service below was chosen because it solves a specific operational gap. Services that did not have a clear, necessary role were excluded. The goal was a lean architecture that can be clearly explained and defended, not an impressive-looking list.
+
+
+
+AWS IoT Core
+
+Device connectivity
+
+AWS IoT Core is the cloud service that receives data from physical devices. In this platform, sensors installed at base station sites continuously send readings about fibre signal strength, generator fuel levels, backup battery charge, and whether equipment cabins have been opened. IoT Core collects all of this incoming data and passes it on for analysis. It also verifies that the device sending data is genuinely one of Airtel's registered site sensors before accepting any information, which prevents false data from entering the system. Crucially, the sensors communicate through a mobile data connection that works independently of the fibre cable being monitored, so the monitoring system stays active even when the fibre itself has been cut.
+
+Well-Architected: Reliability: monitor all components independently
+
+
+
+Amazon CloudWatch
+
+Monitoring and alerts
+
+Amazon CloudWatch watches the data coming in from the sensors and raises an automatic alert the moment any reading falls outside of the normal range. For example, if fibre signal strength drops to zero, if fuel falls below a set threshold, or if battery charge begins declining unexpectedly, CloudWatch catches it immediately and triggers the next stage of the response chain. This happens without any human needing to notice the problem first. CloudWatch also displays live dashboards of every monitored site so the network operations team can see the status of all sites at a glance.
+
+Well-Architected: Reliability: detect failures automatically without human intervention
+
+
+
+AWS Lambda
+
+Automated response logic
+
+AWS Lambda is a service that runs code automatically when triggered by another service. When CloudWatch raises an alert, Lambda runs a set of instructions that identifies which base station is affected, looks up its location and the responsible field team for that area, determines what type of fault has occurred based on which readings are abnormal, and then sends out the appropriate alert through Amazon SNS. Lambda handles all of this in seconds and scales automatically if multiple sites have problems at the same time, which matters during events where vandals target several sites in one area simultaneously.
+
+Well-Architected: Reliability: automate responses to failures; scale without manual effort
+
+
+
+Amazon DynamoDB
+
+Data storage
+
+Amazon DynamoDB is the database that stores two types of records for this platform. The first is a registry of all base station sites, including each site's location, the number of subscribers it serves, and the field team responsible for it. The second is a log of every incident that occurs, including what went wrong, when it was detected, when the field team was notified, and when it was resolved. These incident records serve two purposes. They provide Airtel's management team with data to identify the most problematic sites and prioritise physical upgrades. They also serve as an audit trail that can be used as evidence in NCC compliance reporting.
+
+Well-Architected: Reliability: store data durably; Security: protect records from loss
+
+
+
+Amazon SNS
+
+Notifications
+
+Amazon Simple Notification Service is the delivery system for alerts. Once Lambda has identified a fault and determined its severity, SNS sends the alert to the right recipient through the right channel. A field technician assigned to the affected zone receives a text message with the site location, fault type, and urgency level. The duty manager at the network operations centre receives a notification on their dashboard. For serious incidents, a regional infrastructure manager receives an email. All of this happens automatically from the moment the sensor data triggers an alert, with no manual steps in between.
+
+Well-Architected: Reliability: ensure the right people are informed at the right time
+
+
+
+AWS IAM + Amazon Cognito
+
+Security and access control
+
+AWS Identity and Access Management (IAM) controls which services within the platform are allowed to talk to each other. Each component is given permission to do only what it needs to do and nothing more. AWS Lambda can read site records and write incident logs, but cannot access unrelated data. This principle is called least-privilege access and it is a core security requirement of the AWS Well-Architected Framework. Amazon Cognito manages the login process for human users of the platform, such as NOC staff and field technicians accessing the operations dashboard or mobile application. Cognito requires verified login credentials before granting access, and all activity is logged through AWS CloudTrail so there is a complete record of every action taken on the platform.
+
+Well-Architected: Security: implement least-privilege access; maintain an audit trail
+
+
+
+
+
+7. Architecture Overview
+
+The platform operates as a chain of connected services. An event at a physical site triggers a sequence of automated steps in the cloud that ends with a field technician being dispatched with full information about what has gone wrong and where. No human needs to initiate this process. It runs automatically from the moment a sensor detects something abnormal.
+
+7.1 Step-by-Step Data Flow
+
+Step 1: Something goes wrong at a base station
+
+A fibre cable is cut. A battery starts to discharge faster than normal because backup fuel has run out. A generator is removed from a site compound. Whatever the physical event, the sensors installed at the site register the change within moments. Fibre signal strength drops. Battery voltage falls. Fuel gauge readings change. These readings are captured by the site's monitoring device.
+
+Step 2: The site sends data to AWS IoT Core
+
+The monitoring device at the site sends the sensor readings to AWS IoT Core through a mobile data connection. This mobile connection works independently of the fibre infrastructure at the site, so even if the fibre has been completely cut, the monitoring device can still communicate with the cloud. IoT Core verifies that the data is coming from a registered Airtel site device before passing it forward.
+
+Step 3: Amazon CloudWatch detects the problem
+
+IoT Core passes the incoming sensor data to Amazon CloudWatch. CloudWatch compares each reading against the normal operating range set for that type of sensor. When a reading falls outside the acceptable range and stays there for a defined period, CloudWatch automatically raises an alert. This alert triggers the next step without any human involvement.
+
+Step 4: AWS Lambda classifies the fault and prepares the response
+
+The CloudWatch alert triggers AWS Lambda, which runs the response logic. Lambda looks at which readings are abnormal and determines what type of fault has occurred. A sudden drop in fibre signal combined with a change in backup power readings suggests a cable cut with a secondary power impact. An unexpected drop in fuel with no corresponding signal loss suggests generator theft. Lambda retrieves the affected site's information from DynamoDB, including its location and the contact details of the assigned field team, and prepares a notification.
+
+Step 5: Amazon DynamoDB records the incident
+
+Lambda writes a new incident record to DynamoDB. This record captures the site identifier, the type of fault, the exact time it was detected, and the team that has been notified. As the incident progresses, subsequent updates record when the team acknowledged the alert, when they arrived on site, and when the fault was resolved. This creates a complete timeline for every incident that the infrastructure management team can review and analyse.
+
+Step 6: Amazon SNS delivers the alert
+
+Lambda sends the alert through Amazon SNS to the appropriate recipients. The field team responsible for the affected area receives a text message with the site location, the nature of the fault, and the urgency level. The network operations centre duty manager receives a notification. For high-severity faults, a regional infrastructure manager is also notified by email. All of this happens within seconds of the original sensor reading triggering the CloudWatch alert.
+
+Step 7: Security runs throughout the entire process
+
+AWS IAM ensures that each service in the chain only has access to what it needs. Lambda can read site data and write incident logs, but nothing beyond that. When team members log into the operations dashboard or the field technician mobile application, Amazon Cognito handles the authentication process and requires verified credentials. AWS CloudTrail records every action taken across the platform, creating an auditable log that supports both internal security reviews and any NCC compliance requirements.
+
+
+
+8. Implementation Approach
+
+The implementation plan is divided into four phases. This phased approach ensures that the platform is tested and validated at a smaller scale before being rolled out nationally, which reduces risk and allows the team to refine the system based on real-world experience.
+
+Phase 1: Foundation (Months 1 to 2)
+
+This phase establishes the core AWS infrastructure before any sensors are deployed or any customer-facing work begins. The work includes setting up the AWS account environment, configuring the security permissions that govern how each service interacts with the others, designing the database structure in DynamoDB for both the site registry and the incident log, and creating the monitoring dashboard structure in CloudWatch. No field deployment happens in this phase. The goal is to have a secure and properly structured cloud environment ready to receive data before any devices are connected to it.
+
+Phase 2: Pilot Deployment (Months 3 to 4)
+
+The platform is deployed and tested at 50 base station sites in Lagos Mainland West. This area is selected as the pilot location because it is documented in the research as one of the highest-frequency incident zones in Nigeria, with Alimosho and the Mainland specifically described in BusinessDay NG (April 2025) as emerging hotspots for cable theft and vandalism. Deploying in the highest-risk area first means the platform will encounter real incidents quickly, which accelerates learning about how the alert thresholds and fault classification logic perform in practice.
+
+By the end of this phase, the system should be receiving live data from all 50 pilot sites, automatically detecting faults, sending alerts to field teams, and recording every incident. The operations team will evaluate how accurate the alerts are and how the response times compare to the pre-platform baseline.
+
+Phase 3: Refinement (Months 5 to 6)
+
+Based on the pilot results, the alert thresholds in CloudWatch are adjusted to reduce false alarms while ensuring genuine faults are still caught quickly. The Lambda fault classification logic is updated based on any patterns observed during the pilot that were not anticipated at the design stage. The field technician mobile application and NOC dashboard are reviewed and improved based on feedback from the staff using them. A weekly reporting view is added to DynamoDB analytics so that the infrastructure management team has regular visibility into fault frequency by location.
+
+Phase 4: National Rollout (Month 7 onwards)
+
+Following successful validation of the refined platform, deployment expands across all of Airtel Nigeria's base station sites nationally. The rollout follows a priority sequence based on incident frequency data, beginning with the highest-risk urban zones and progressing to lower-frequency rural locations. The target outcome for a fully operational national deployment is an average time from physical fault occurrence to field team alert of under two minutes, and a measurable reduction in mean-time-to-repair compared to the pre-platform baseline.
+
+
+
+9. Security Considerations
+
+Security in this platform operates at two levels. The first is the security of the platform itself, meaning controlling who and what can access the cloud system. The second is ensuring that the data stored within the platform, particularly incident records that may contain sensitive operational information, is properly protected.
+
+9.1 Access Control
+
+Every service in the platform is given a specific, limited set of permissions through AWS IAM. Lambda can access DynamoDB and SNS but nothing else. IoT Core can pass data to CloudWatch but cannot write to DynamoDB directly. This principle of least-privilege access means that even if one part of the system were compromised, the damage would be contained because that component cannot reach beyond its defined boundaries.
+
+Human users of the platform, including NOC staff and field technicians, authenticate through Amazon Cognito before accessing any part of the system. Cognito requires valid credentials and keeps user sessions secure. No one can access the operations dashboard or field application without going through this authentication step.
+
+9.2 Data Protection
+
+All data stored in DynamoDB is encrypted at rest, meaning it is converted into a form that cannot be read without the correct decryption key. All data moving between services within the platform is encrypted in transit, meaning it cannot be intercepted and read while travelling between components. These protections apply to sensor readings, site registry data, and incident records.
+
+9.3 Audit Trail
+
+AWS CloudTrail records every action taken across the platform, including which service or user performed each action, what they did, and when. This creates an immutable audit log that can be used to investigate any security incidents, to verify that the system responded correctly during a fault event, and to provide evidence for NCC compliance reporting. The NCC's enforcement framework increasingly requires operators to demonstrate operational accountability, and CloudTrail provides exactly this kind of documented record.
+
+9.4 Nigeria Data Protection Regulation (NDPR) Compliance
+
+The Nigeria Data Protection Regulation (NDPR) sets requirements for how organisations store and protect personal and sensitive data. While the majority of data in this platform is operational rather than personal, any data that could be linked to individual subscribers or staff members is handled according to NDPR principles. This includes encryption, access restrictions, and defined retention periods for incident records.
+
+
+
+10. Scalability and Reliability Considerations
+
+10.1 Handling Multiple Simultaneous Incidents
+
+One of the most important reliability requirements for this platform is the ability to handle multiple base station faults occurring at the same time. Organised vandalism events, severe weather, or large construction projects can cause simultaneous infrastructure damage across multiple sites in a single geographic area. The platform must be able to detect and respond to all of these incidents in parallel without any single alert being delayed because the system is busy processing another one.
+
+AWS Lambda is designed specifically for this kind of parallel processing. It automatically creates as many simultaneous response instances as needed without any manual configuration. This means 10 simultaneous alerts are handled exactly as quickly as one. Amazon CloudWatch and AWS IoT Core are both fully managed services built to handle high volumes of data continuously, with no manual scaling required.
+
+10.2 Data Availability and Backup
+
+Amazon DynamoDB automatically stores copies of all data across multiple physical locations within the AWS cloud. This means that even if there is a hardware problem at one AWS facility, the site registry and incident records remain available and unaffected. DynamoDB also includes a point-in-time recovery feature that allows data to be restored to any point within the previous 35 days if records are accidentally deleted or corrupted. This protects the incident audit trail, which is a regulatory compliance requirement.
+
+10.3 Platform Reliability
+
+All six AWS services used in this platform are managed by Amazon and backed by published service reliability guarantees of 99.9 percent availability or better. This means the monitoring platform itself is more reliably available than the physical infrastructure it monitors, which is a fundamental design requirement. It would defeat the purpose of the system if the monitoring platform went offline at the same time as the site it is watching.
+
+10.4 Recovery Targets
+
+Based on the architecture described above, the target Recovery Time Objective (RTO) for the platform is under 15 minutes, meaning that if any part of the platform experiences a failure, it should be restored within that window. The target Recovery Point Objective (RPO) is zero data loss, meaning that incident records and site data are protected against any single point of failure through DynamoDB's multi-location replication and point-in-time recovery capability.
+
+
+
+11. Cost Considerations
+
+AWS pricing is based on actual usage rather than fixed infrastructure costs. This means the platform does not require large upfront investment and costs scale with the volume of data and activity rather than with the number of sites registered. The following estimates are based on the AWS Pricing Calculator and represent approximate monthly costs for a deployment covering 50,000 monitored base station sites.
+
+AWS IoT Core
+
+Priced per message received. At 12 sensor readings per hour per site across 50,000 sites, approximately 43 million messages per month. Estimated cost: $3,456 per month.
+
+Amazon CloudWatch
+
+Priced per metric tracked, per dashboard, and per log data ingested. Estimated cost: approximately $450 per month for dashboards and monitoring.
+
+AWS Lambda
+
+Priced per function execution. At an estimated 500,000 automated fault responses per month: approximately $200 per month.
+
+Amazon DynamoDB
+
+Priced per read and write operation and per data stored. For estimated monthly activity across site registry and incident log: approximately $180 per month.
+
+Amazon SNS
+
+Priced per notification sent, including text messages. Estimated monthly alert volume: approximately $300 per month including SMS delivery.
+
+IAM + Cognito
+
+IAM has no additional charge. Cognito is priced per active user per month. For an estimated 500 staff users: approximately $50 per month.
+
+Total (estimate)
+
+Approximately $4,636 per month for a 50,000-site deployment, equivalent to roughly N7 million per month at current exchange rates.
+
+
+
+To put this cost in context: the documented Lagos infrastructure damage losses in 2024 alone were N5 billion. The October 2025 NCC enforcement fine across three operators was N45 million. A single avoided enforcement action at that scale covers six months of platform operating costs. The annual savings from faster fault response and reduced outage duration dwarf the annual platform cost many times over.
+
+
+
+12. Expected Benefits
+
+12.1 Operational Benefits
+
+Reduction in detection time from hours to under two minutes between a physical fault occurring and a field team being notified.
+
+Field teams arrive at fault sites already knowing what has gone wrong and where, reducing the time spent on-site diagnosing the problem before repairs can begin.
+
+The operations team gains a live view of all monitored site health through CloudWatch dashboards, replacing manual status checks.
+
+DynamoDB incident analytics allow the infrastructure management team to identify which sites experience the highest fault frequency and prioritise physical reinforcement investment accordingly.
+
+12.2 Financial Benefits
+
+Reduced infrastructure repair costs through faster dispatch, which limits secondary damage that accumulates when faults go undetected.
+
+Reduced NCC QoS penalty exposure through demonstrably shorter outage durations.
+
+Reduced subscriber churn risk by shortening the period during which subscribers experience service loss.
+
+Lower long-term equipment replacement costs through earlier detection of theft and damage before secondary failures compound.
+
+12.3 Compliance and Governance Benefits
+
+CloudTrail audit logs provide a ready-made compliance record for NCC Quality of Service reporting without requiring manual data compilation.
+
+Incident analytics enable Airtel to demonstrate measurable operational improvement to the NCC backed by data, which is valuable in any enforcement context.
+
+NDPR-compliant data handling through encryption and access controls across all stored records.
+
+
+
+13. Limitations and Assumptions
+
+13.1 Limitations
+
+This platform addresses the detection and response gap in Airtel Nigeria's infrastructure management. It does not address the underlying causes of vandalism and theft, which require physical security improvements, community engagement, and law enforcement coordination at a level beyond what any cloud platform can provide.
+
+The platform relies on each base station site having access to a mobile data connection independent of its fibre infrastructure. In remote areas where Airtel is the only network provider with coverage, this secondary connection may not be available. These locations are precisely where remote monitoring would be most valuable, and the limitation is acknowledged as a constraint of the current architecture.
+
+Sensor hardware installation across Airtel's full network estate is a large capital programme that extends well beyond the scope of this project. This document describes the cloud architecture that the hardware feeds into but does not address procurement, logistics, or site access for hardware deployment.
+
+13.2 Assumptions
+
+Airtel Nigeria has or will acquire sensor hardware compatible with AWS IoT Core for base station monitoring.
+
+Field technician teams have mobile devices capable of receiving text message alerts and accessing a mobile application.
+
+A mobile data connection from a secondary provider is available at a minimum of 80 percent of target sites.
+
+Airtel Nigeria's information security policies permit operational telemetry data to be transmitted to an AWS cloud environment subject to the encryption and access controls described in Section 9.
+
+The AWS deployment uses the Africa (Cape Town) region as the primary region, subject to data residency requirements to be confirmed by Airtel's legal team.
+
+
+
+14. Conclusion
+
+Nigeria's digital economy is growing faster than the physical infrastructure supporting it can be protected. Airtel Nigeria, serving over 57 million subscribers on a network that sustains more than 43 documented fibre cuts per day, operates in an environment where the response to physical infrastructure failure determines how much of that damage subscribers actually experience as lost service.
+
+The platform proposed in this document does not solve vandalism. What it does is ensure that Airtel finds out about physical infrastructure failures within seconds rather than hours. By connecting base station sensors to cloud-based monitoring through AWS IoT Core, detecting anomalies automatically through Amazon CloudWatch, running response logic through AWS Lambda, storing incident records in Amazon DynamoDB, and delivering targeted alerts through Amazon SNS, the platform turns a reactive model that depends on subscriber complaints into an automated one that acts before subscribers notice anything is wrong.
+
+The evidence for this investment is clear. The $23 million in industry repair costs in 2023, the N5 billion in Lagos operator losses in 2024, the N2.3 billion in generator theft in 2025, and the direct NCC fines already levied against Airtel are all documented and verifiable. Each of these costs is reduced when faults are detected faster and field teams are dispatched with better information. The platform proposed here achieves this using six AWS services that are proven, available today, and deployable at the scale Airtel requires.
+
+CLOSING REFLECTION
+
+This capstone applies the core principles of AWS cloud computing to a real Nigerian business problem supported by real public evidence. The goal throughout has been to design a solution that is not only technically sound but genuinely useful for one of Nigeria's most important telecommunications operators and for the millions of subscribers who depend on it every day.
+
+
+
+
+
+15. References
+
+Airtel Africa Plc. Annual Report and Accounts 2023/2024. London Stock Exchange investor relations filing.
+
+BusinessDay NG. "Subscribers hit as telco towers turn targets for vandals." April 1, 2025. businessday.ng
+
+Business AM Live. "Nigeria's digital backbone faces early-year shock from rising fibre damage." February 23, 2026. businessamlive.com
+
+Blueprint Newspapers. "How surge in attacks on telecoms infrastructure slows digital economy growth." May 2026. blueprint.ng
+
+France24 / AFP. "Vandalism hobbles Nigeria's mobile telephone services." August 29, 2025. france24.com
+
+Legit.ng. "Network Disrupts Calls, Data, Subscribers Call on MTN, Airtel, Others for Solution." June 4, 2025. legit.ng
+
+Technext / MEXC Nigeria. "Nigerian telecoms suffered 118 network outages in December 2025." January 2026. Data from NCC Uptime Portal.
+
+Nigerian Communications Commission (NCC). Quality of Service Regulations 2024. ncc.gov.ng
+
+Federal Government of Nigeria. Designation and Protection of Critical National Information Infrastructure (CNII) Order 2024. Signed June 24, 2024.
+
+Amazon Web Services. AWS Well-Architected Framework. aws.amazon.com/architecture/well-architected
+
+Amazon Web Services. AWS Pricing Calculator. calculator.aws
+
+GSMA Intelligence. The Mobile Economy: Nigeria 2024. gsma.com/mobileeconomy
+
