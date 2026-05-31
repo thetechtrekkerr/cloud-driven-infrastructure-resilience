@@ -14,7 +14,7 @@ An AWS-Based Monitoring and Automated Incident Response Platform
 
 Prepared by:
 
-TheTechTrekkerr
+Abdus-somad Olanrewaju Gbadamosi
 
 First-Year Computer Engineering Student, University of Ilorin
 
@@ -22,7 +22,7 @@ Airtel Africa Foundation Tech Fellow
 
 AWS Student Builder Group, University of Ilorin
 
-Scenario A: Infrastructure Resilience and Security
+
 
 Submission Date: 2026
 
